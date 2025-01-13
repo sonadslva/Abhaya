@@ -48,42 +48,6 @@ body {
   font-family: 'myfont';
 }
 
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f7fafc;
-}
-
-.blue-box {
-  width: 100%;
-  max-width: 600px; 
-  background-color: #93c5fd; 
-  padding: 16px; 
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-
-.login-box {
-  background-color: white;
-  padding: 24px;
-  border-radius: 10px;
-  box-shadow: 0 10px 40px #00000026;
-  width: 100%;
-  max-width: 400px; 
-  height: auto;
-}
-
-
-.login-box h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #3b82f6; 
-  text-align: center;
-  margin-bottom: 24px;
-}
 
 .ayurAnim{
   transition: all .2s ease-in-out;
@@ -100,39 +64,7 @@ body {
     top: 0;
   } 
 }
-.textbox input {
-  width: 90%;
-  padding: 12px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-bottom: 16px;
-  transition: all 0.3s ease;
-}
 
-
-.textbox input:focus {
-  outline: none;
-  border-color: #60a5fa; 
-  box-shadow: 0 0 5px rgba(96, 165, 250, 0.6); 
-}
-
-
-.btn {
-  width: 100px;
-  padding: 12px;
-  background-color: #3b82f6; 
-  color: rgb(147, 223, 236);
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #2563eb; 
-}
 
 
 .text-center {
@@ -233,4 +165,63 @@ p {
 }
 .testimon{
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.leafAnimation{
+  transition: all;
+  animation: leafAnim 5s infinite;
+}
+@keyframes leafAnim {
+  0%{
+    transform: translateX(-5px);
+    rotate: 10deg;
+  }
+  50%{
+    transform: translateX(5px);
+    rotate: -10deg;
+  }
+  100%{
+    transform: translateX(-5px);
+    rotate: 10deg;
+  }
+}
+.no-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.clip-inverted-arch{
+  clip-path: circle(100vh at 50% -85vh);
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+}
+.clip-outverted-arch {
+  clip-path:circle(100vh at 50% 85vh);
+  position: relative;
+  height: 100px; 
+  overflow: hidden;
+}
+.custom-shape-divider-top-1736324321 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1736324321 svg {
+  position: relative;
+  display: block;
+  width: calc(147% + 1.3px);
+  height: 55px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1736324321 .shape-fill {
+  fill: #b0dcbe;
 }

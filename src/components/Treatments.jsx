@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import backpain from "../assets/backpain.jpg";
 import neckpain from "../assets/neckpain.jpg";
 import hairfall from "../assets/hairfall.jpg";
@@ -8,23 +7,34 @@ import migraine from "../assets/migrain.jpg";
 import women from "../assets/women.jpeg";
 import frozensholder from "../assets/frozensholder.jpg";
 import childcare from "../assets/childcare.jpg";
-import Ayurvedic1 from "../assets/ayurvedic-header.jpg";
-import Ayurvedic2 from "../assets/Ayurvedic-Treatment-in-Kerala.jpg";
-import Ayurvedic3 from "../assets/Treatment.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Dhara from "../assets/Dharaa.jpg";
-import img from "../assets/img.jpg";
 import navarakizi from "../assets/navarakizhi.jpg";
 import elakizhi from "../assets/elakizhi.jpg";
-import pizhichil from '../assets/pizichill.jpg'
-import Shirodhara from '../assets/Shirodhara.jpg'
-import kashayadhara from '../assets/kashayadhara.jpg'
-import ayurvedicmassage from '../assets/ayurvedicmassage.jpg'
-import nasyam from '../assets/nasyam.jpg'
+import pizhichil from "../assets/pizichill.jpg";
+import Shirodhara from "../assets/Shirodhara.jpg";
+import kashayadhara from "../assets/kashayadhara.jpg";
+import ayurvedicmassage from "../assets/ayurvedicmassage.jpg";
+import nasyam from "../assets/nasyam.jpg";
+import whiteWave from "../assets/whitewave.png";
+import aaa from "../assets/aaa.jpg";
+import treat6 from "../assets/treat6.jpg";
+import treat7 from "../assets/treat7.png";
+import middle from "../assets/middle.jpg";
+import leaf from "../assets/plant tree.png";
+import b3 from "../assets/b3.jpg";
+import small from "../assets/small.png";
+import bgorg from "../assets/treatbgorg.jpg";
+import bottomSide from "../assets/bggrn.png";
+import blackshade from "../assets/black-shade.png";
+import tbg from "../assets/tbg.jpg";
+
+
 const Team = () => {
+  const [activeIndex, setActiveIndex] = useState(0); // Default middle card index
   const [visibleIndex, setVisibleIndex] = useState(0);
 
   const handleNext = () => {
@@ -34,363 +44,354 @@ const Team = () => {
   const handlePrev = () => {
     if (visibleIndex > 0) setVisibleIndex(visibleIndex - 1);
   };
+  const services = [
+    {
+      title: "Dhara",
+      overview:
+        "Dhara is a therapeutic procedure where medicated liquids such as herbal oils, milk, or buttermilk are poured steadily over specific body parts or the entire body.",
+      benefits:
+        "Improves blood circulation, relaxes the mind, and alleviates stress-related disorders like insomnia and anxiety.",
+      uses: "Used to treat neurological disorders, skin conditions, and joint pain.",
+      image: Dhara,
+    },
+    {
+      title: "Navarakizhi",
+      overview:
+        "A rejuvenation therapy where a bolus of cooked medicinal rice (Navara) is dipped in herbal decoctions and milk, then massaged over the body.",
+      benefits:
+        "Enhances skin texture, boosts immunity, and strengthens muscles.",
+      uses: "Recommended for neurological disorders, rheumatism, and post-natal care.",
+      image: navarakizi,
+    },
+    {
+      title: "Elakizhi",
+      overview:
+        "A technique where a bolus filled with medicinal leaves is heated and used to massage the body.",
+      benefits:
+        "Reduces joint pain, improves muscle flexibility, and promotes detoxification.",
+      uses: "Often used for arthritis, back pain, and sports injuries.",
+      image: elakizhi,
+    },
+    {
+      title: "Pizhichil",
+      overview:
+        "Known as 'Thailadhara,' Pizhichil involves pouring warm medicated oils continuously over the body while simultaneously performing a gentle massage.",
+      benefits:
+        "Enhances blood circulation, soothes the nervous system, and promotes skin health.",
+      uses: "Treats paralysis, arthritis, and nervous disorders.",
+      image: pizhichil,
+    },
+    {
+      title: "Shirodhara",
+      overview:
+        "A relaxation therapy where a continuous stream of warm herbal oil or milk is poured over the forehead (third eye region).",
+      benefits: "Calms the mind, improves sleep quality, and reduces stress.",
+      uses: "Treats insomnia, depression, and anxiety-related conditions.",
+      image: Shirodhara,
+    },
+    {
+      title: "Kashaya Dhara",
+      overview:
+        "A variation of Dhara that uses herbal decoctions (kashaya) instead of oils. These decoctions are customized based on the individual's health condition.",
+      benefits:
+        "Detoxifies the body, improves skin health, and reduces inflammation.",
+      uses: "Ideal for conditions like arthritis, psoriasis, and muscle stiffness.",
+      image: kashayadhara,
+    },
+    {
+      title: "Ayurvedic Massage",
+      overview:
+        "A therapeutic massage using herbal oils tailored to the individual's dosha (body constitution).",
+      benefits:
+        "Relieves stress, improves blood circulation, and revitalizes the skin.",
+      uses: "Effective for pain management, fatigue, and overall relaxation.",
+      image: ayurvedicmassage,
+    },
+    {
+      title: "Nasyam",
+      overview:
+        "A nasal treatment where herbal oils or powders are administered through the nostrils.",
+      benefits:
+        "Clears sinus blockages, improves respiratory health, and enhances cognitive function.",
+      uses: "Effective for sinusitis, migraines, and chronic headaches.",
+      image: nasyam,
+    },
+  ];
 
+  const treatmentsLists = [
+    {
+      title: "Back Pain",
+      img: backpain,
+      sub: "Ayurvedic Treatment for Back Pain",
+    },
+    {
+      title: "Neck Pain",
+      img: neckpain,
+      sub: "Ayurvedic Treatment for Neck Pain",
+    },
+    {
+      title: "Child Illness",
+      img: childcare,
+      sub: "Ayurvedic Treatment for Child Illness",
+    },
+    {
+      title: "Leg Pain",
+      img: legpain,
+      sub: "Ayurvedic Treatment for Leg Pain",
+    },
+    {
+      title: "Hair Fall",
+      img: hairfall,
+      sub: "Ayurvedic Treatment for Hair Fall",
+    },
+    {
+      title: "Frozen Sholder",
+      img: frozensholder,
+      sub: "Ayurvedic Treatment for Frozen Sholder",
+    },
+    {
+      title: "Migraine",
+      img: migraine,
+      sub: "Ayurvedic Treatment for Migrain",
+    },
+    {
+      title: "Women",
+      img: women,
+      sub: "Ayurvedic Treatment for Women Diseases",
+    },
+  ];
+  const openModal = (item) => {
+    setSelectedTreatment(item);
+  };
+
+  const closeModal = () => {
+    setSelectedTreatment(null);
+  };
+  const [selectedTreatment, setSelectedTreatment] = useState(null);
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col overflow-hidden">
       <div className="w-full h-full bg-neutral-200">
-        <section>
-          <div className="w-full ">
+        <section className="relative flex flex-col justify-center items-center h-screen z-10">
+          {/* Background images */}
+          <div className="absolute w-full h-full top-0 left-0">
             <img
-              src={img}
-              alt="ayur"
-              className="w-full h-[600px] flex object-cover"
+              src={blackshade}
+              alt=""
+              className="w-full h-full object-cover"
             />
+          </div>
+          <div className="absolute w-full h-full -z-10">
+            <img src={b3} alt="ayur" className="w-full h-full object-cover" />
+          </div>
+
+          {/* Content */}
+          <div className="absolute z-30 flex flex-col justify-center items-center text-center w-full h-full">
+            <div className="text-[100px] font-black text-[#fff] leading-tight banner-title mb-5">
+              Lorem ipsum dolor sit{" "}
+              <span className="block banner-title">amet consectetur</span>
+            </div>
+            <div className="px-2 max-w-[1150px] mx-auto text-[#fff] md:text-xl mb-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              ratione, hic culpa ullam minus labore veritatis similique aut
+              expedita accusantium molestias repudiandae odio corrupti
+              temporibus ducimus beatae eligendi dolorum ipsum. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Quis odio perferendis
+            </div>
+            <div className="flex justify-center items-center gap-2 md:gap-10">
+              <div className="px-10 py-2 rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md">
+                Discover More
+              </div>
+            </div>
+          </div>
+          <div className=" absolute bottom-0 left-0 right-0 w-full">
+            <img src={whiteWave} alt="" className="w-full object-cover" />
           </div>
         </section>
       </div>
 
-      {/* treatment */}
-      <section className="w-full h-full bg-pink-100 py-16">
-        <div className="container mx-auto px-6 relative overflow-hidden  w-[1200px]">
-          <h1 className="text-center text-2xl font-bold mb-8">
-            TREATMENTS AVAILABLE
-          </h1>
-          <div className="flex items-center relative">
-            <button
-              onClick={handlePrev}
-              disabled={visibleIndex === 0}
-              className="absolute left-0 bg-gray-300 p-2 rounded-full shadow-md hover:bg-gray-400 focus:outline-none disabled:opacity-50 z-10"
-            >
-              ←
-            </button>
-            <div
-              className="flex transition-transform duration-300 "
-              style={{ transform: `translateX(-${visibleIndex * 150}px)` }}
-            >
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
+      {/* Treatment */}
+
+      <section className="text-center w-full flex flex-col justify-center items-center mb-10 relative" id="treatment-services">
+        <div className=" absolute right-0 top-[-35px] w-auto h-[350px]">
+          <img
+            src={leaf}
+            alt=""
+            className="w-full h-full object-contain leafAnimation"
+          />
+        </div>
+        <div className="max-w-[1400px] mx-auto pt-20">
+          <div className="flex justify-center items-center md:mt-[-140px]">
+            <div className="">
+              <div className="w-[400px] h-[550px] bg-[#bc5555] relative">
                 <img
-                  src={backpain}
-                  alt="Ayurvedic Treatment for Back Pain"
-                  className="w-full h-48 object-cover rounded-full mb-4"
+                  src={treat7}
+                  alt=""
+                  className="w-full h-full object-cover"
                 />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Back Pain
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Tailored therapies including Abhyanga (herbal oil massage) and
-                  Kati Basti to alleviate back pain and improve spinal health.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
-                <img
-                  src={neckpain}
-                  alt="Ayurvedic Treatment for Neck Pain"
-                  className="w-full h-48 object-cover rounded-full mb-4"
-                />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Neck Pain
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Therapies such as Greeva Basti relieve neck stiffness and
-                  improve mobility.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
-                <img
-                  src={childcare}
-                  alt="Ayurvedic Treatment for Child Illness"
-                  className="w-full h-48 object-cover rounded-full mb-4"
-                />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Child Illness
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Pediatric Ayurvedic care includes herbal remedies, oil
-                  massages, and dietary guidance to enhance immunity.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
-                <img
-                  src={legpain}
-                  alt="Ayurvedic Treatment for Leg Pain"
-                  className="w-full h-48 object-cover rounded-full mb-4"
-                />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Leg Pain
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Therapies such as Janu Basti target leg pain, improve
-                  circulation, and address muscle stiffness.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
-                <img
-                  src={frozensholder}
-                  alt="Ayurvedic Treatment for Frozen Shoulder"
-                  className="w-full h-48 object-cover rounded-full mb-4"
-                />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Frozen Shoulder
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Specialized treatments like Pichu reduce shoulder stiffness
-                  and restore mobility.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
-                <img
-                  src={hairfall}
-                  alt="Ayurvedic Treatment for Hairfall and Dandruff"
-                  className="w-full h-48 object-cover rounded-full mb-4"
-                />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Hairfall and Dandruff
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Shirodhara and herbal scalp treatments promote hair growth and
-                  combat dandruff.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
-                <img
-                  src={migraine}
-                  alt="Ayurvedic Treatment for Migraine"
-                  className="w-full h-48 object-cover rounded-full mb-4"
-                />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Migraine
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Shirodhara, Nasya, and herbal formulations are used to
-                  alleviate migraine pain.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg  shadow-md text-center w-[300px] flex-shrink-0">
-                <img
-                  src={women}
-                  alt="Ayurvedic Treatment for Women Illness"
-                  className="w-full h-48 object-cover rounded-full mb-4"
-                />
-                <h4 className="text-xl font-semibold">
-                  Ayurvedic Treatment for Women Illness
-                </h4>
-                <p className="mt-4 text-gray-600 text-sm">
-                  Treatments focus on menstrual irregularities, hormonal
-                  balance, and overall reproductive health.
-                </p>
               </div>
             </div>
-            <button
-              onClick={handleNext}
-              disabled={visibleIndex >= 6}
-              className="absolute right-0 bg-gray-300 p-2 rounded-full shadow-md hover:bg-gray-400 focus:outline-none disabled:opacity-50 z-10"
+            <div className="w-[400px] h-[550px] mt-28 bg-[#621313] relative">
+              <img src={middle} alt="" className="w-full h-full object-cover" />
+            </div>
+            <div className="w-[400px] h-[550px] mt-60 bg-[#393838] relative">
+              <img src={treat6} alt="" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className=" absolute bottom-0 left-2 w-[250px] h-[250px] rounded-full overflow-hidden">
+            <img src={aaa} alt="" />
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <section className="mb-20 relative py-10 bg-[#FFF9D9]" id="treatment-treatments" >
+       
+        <div className="  h-[700px]">
+          <div className="text-[50px] font-bold text-center mb-3 mt-10">
+            Lorem ipsum dolor
+          </div>
+          <div className="mb-10 text-center max-w-[1000px] mx-auto">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, sapiente soluta rem quae suscipit distinctio error quam
+            quos neque iure debitis totam facere esse animi provident tempore
+            laboriosam perspiciatis cum. Saepe beatae iusto ad, odio iste
+            reiciendis blanditiis, dolorem recusandae a accusamus expedita et
+            alias similique? Aspernatur doloremque repellat sint placeat sequi
+            omnis nisi quidem tempora. Fuga libero aperiam odio?
+          </div>
+          {/* Slider */}
+          <div className="w-full flex justify-center items-center max-w-[1400px] mx-auto">
+            <Swiper
+              centeredSlides={true} 
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true} 
+              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} 
+              onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
+              modules={[Autoplay]}
+              className="w-full"
+              breakpoints={{
+                640: {
+                  slidesPerView: 1, 
+                  centeredSlides: false, 
+                },
+                768: {
+                  slidesPerView: 2, 
+                  centeredSlides: true,
+                },
+                1024: {
+                  slidesPerView: 3, 
+                  centeredSlides: true,
+                },
+              }}
             >
-              →
-            </button>
+              {treatmentsLists.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <div
+                    className={`w-full flex flex-col items-center rounded-tr-[] justify-center transition-all duration-500 relative ${
+                      activeIndex === i ? "h-[400px]" : "h-[300px] mt-[50px]"
+                    }`}
+                  >
+                    <img
+                      src={blackshade}
+                      className="top-0 bottom-0 right-0 left-0 absolute w-full h-full object-cover opacity-70"
+                      alt=""
+                    />
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="h-full w-full object-cover"
+                    />
+                    <div className=" absolute bottom-5 flex flex-col justify-center items-center">
+                      <h3 className="text-white font-bold text-lg mt-4">
+                        {item.title}
+                      </h3>
+                      <p className="text-white text-sm">{item.sub}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          {selectedTreatment && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white w-[80%] max-w-[800px] p-6 rounded-lg">
+            <button onClick={closeModal} className="absolute top-3 right-3 text-xl text-gray-600">X</button>
+            <img
+              src={selectedTreatment.img}
+              alt={selectedTreatment.title}
+              className="w-full h-[400px] object-cover rounded-md"
+            />
+            <h3 className="text-2xl font-bold mt-4">{selectedTreatment.title}</h3>
+            <p className="text-lg mt-2">{selectedTreatment.fullDesc}</p>
+          </div>
+        </div>
+      )}
+        </div>
+      </section>
+
+      <section className="w-full relative py-10 overflow-hidden rounded-t-[60%] mb-20">
+        <div className=" absolute top-0 bottom-0 left-0 right-0 -z-10 opacity-60 w-full">
+          <img
+            src={bottomSide}
+            alt=""
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-[50px] font-bold text-center mb-2">
+            Lorem ipsum dolor sit
+          </div>
+          <div className="text-center max-w-[1000px] mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            consequatur dolores harum nihil soluta id, quo quae repellat quasi
+            provident, odit aliquam adipisci sunt laborum vero, repellendus illo
+            praesentium Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Tenetur dicta eum nihil veritatis similique, labore omnis
+            exercitationem numquam nisi error eius non vel nostrum corrupti
+            corporis. Nemo, obcaecati! Quo, fugit.
           </div>
         </div>
       </section>
-      {/* services */}
-      <section className="flex items-center justify-center p-6 bg-gray-100">
-  <div className="grid grid-cols-1 gap-8">
-    {[
-      {
-        title: "Dhara",
-        overview:
-          "Dhara is a therapeutic procedure where medicated liquids such as herbal oils, milk, or buttermilk are poured steadily over specific body parts or the entire body.",
-        benefits:
-          "Improves blood circulation, relaxes the mind, and alleviates stress-related disorders like insomnia and anxiety.",
-        uses:
-          "Used to treat neurological disorders, skin conditions, and joint pain.",
-        image: Dhara,
-      },
-      {
-        title: "Navarakizhi",
-        overview:
-          "A rejuvenation therapy where a bolus of cooked medicinal rice (Navara) is dipped in herbal decoctions and milk, then massaged over the body.",
-        benefits:
-          "Enhances skin texture, boosts immunity, and strengthens muscles.",
-        uses:
-          "Recommended for neurological disorders, rheumatism, and post-natal care.",
-        image: navarakizi,
-      },
-      {
-        title: "Elakizhi",
-        overview:
-          "A technique where a bolus filled with medicinal leaves is heated and used to massage the body.",
-        benefits:
-          "Reduces joint pain, improves muscle flexibility, and promotes detoxification.",
-        uses: "Often used for arthritis, back pain, and sports injuries.",
-        image: elakizhi,
-      },
-      {
-        title: "Pizhichil",
-        overview:
-          "Known as 'Thailadhara,' Pizhichil involves pouring warm medicated oils continuously over the body while simultaneously performing a gentle massage.",
-        benefits:
-          "Enhances blood circulation, soothes the nervous system, and promotes skin health.",
-        uses: "Treats paralysis, arthritis, and nervous disorders.",
-        image: pizhichil,
-      },
-      {
-        title: "Shirodhara",
-        overview:
-          "A relaxation therapy where a continuous stream of warm herbal oil or milk is poured over the forehead (third eye region).",
-        benefits:
-          "Calms the mind, improves sleep quality, and reduces stress.",
-        uses: "Treats insomnia, depression, and anxiety-related conditions.",
-        image: Shirodhara,
-      },
-      {
-        title: "Kashaya Dhara",
-        overview:
-          "A variation of Dhara that uses herbal decoctions (kashaya) instead of oils. These decoctions are customized based on the individual's health condition.",
-        benefits:
-          "Detoxifies the body, improves skin health, and reduces inflammation.",
-        uses: "Ideal for conditions like arthritis, psoriasis, and muscle stiffness.",
-        image: kashayadhara,
-      },
-      {
-        title: "Ayurvedic Massage",
-        overview:
-          "A therapeutic massage using herbal oils tailored to the individual's dosha (body constitution).",
-        benefits:
-          "Relieves stress, improves blood circulation, and revitalizes the skin.",
-        uses: "Effective for pain management, fatigue, and overall relaxation.",
-        image: ayurvedicmassage,
-      },
-      {
-        title: "Nasyam",
-        overview:
-          "A nasal treatment where herbal oils or powders are administered through the nostrils.",
-        benefits:
-          "Clears sinus blockages, improves respiratory health, and enhances cognitive function.",
-        uses: "Effective for sinusitis, migraines, and chronic headaches.",
-        image: nasyam,
-      },
-    ].map((service, index) => (
-      <div
-        key={index}
-        className={`grid grid-cols-1 md:grid-cols-2 gap-6 bg-white shadow-lg overflow-hidden transition-transform transform hover:scale-105 rounded-lg w-[1200px]`}
-      >
-        <div className="flex flex-col justify-center p-6 space-y-4">
-          <h2 className="text-3xl font-extrabold text-gray-800 mb-2 text-center md:text-left">{service.title}</h2>
-          <div>
-            <h3 className="text-lg font-semibold paraFont mb-1">Overview</h3>
-            <p className="text-gray-600 leading-relaxed paraFont text-base">{service.overview}</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold paraFont mb-1">Benefits</h3>
-            <p className="text-gray-600 leading-relaxed paraFont text-base">{service.benefits}</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold paraFont mb-1">Common Uses</h3>
-            <p className="text-gray-600 leading-relaxed paraFont text-base">{service.uses}</p>
-          </div>
-        </div>
-        <div className=" f-full flex items-center justify-center p-4">
-          <img
-            src={service.image}
-            alt={service.title}
-            className="h-full w-[350px]  flex object-cover rounded-md shadow-sm border border-gray-200"
-          />
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
 
-
-      {/* disease */}
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-6 ml-20 mr-20">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0">
-            {/* Left: Text and List Section */}
-            <div className="md:w-[50%] text-center md:text-left">
-              <h2 className="text-4xl font-extrabold text-green-600 mb-6">
-                Abhaya Ayurveda Hospital
-              </h2>
-              <p className="text-xl text-gray-700 mb-6">
-                Offers effective and result-based Panchakarma & Ayurveda
-                treatments for various health concerns.
-              </p>
-
-              <ol className="list-none space-y-4 text-left">
-                <div className="flex flex-wrap justify-center md:justify-start gap-10">
-                  {/* Left Column */}
-                  <div className="space-y-2">
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Back Pain
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Knee Pain
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Joint Pain
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Diabetes
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Asthma
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Obesity
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Cholesterol
-                    </li>
-                  </div>
-                  {/* Right Column */}
-                  <div className="space-y-2">
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Sinusitis
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Migraine
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Infertility
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Arthritis
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Osteoarthritis
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Rheumatoid Arthritis
-                    </li>
-                    <li className="flex items-center text-lg text-gray-700">
-                      <span className="mr-2 text-blue-500">➤</span>
-                      Neck Pain
-                    </li>
-                  </div>
+      <section className="w-full mb-10 py-10">
+        <div className="w-full max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 gap-20 max-w-[1400px] mx-auto">
+            {services.map((item) => (
+              <div className="w-full h-[350px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] relative rounded-br-[50px] px-4 py-5">
+                <div className=" absolute top-0 bottom-0 left-0 right-0 rounded-br-[50px] overflow-hidden opacity-20">
+                  <img
+                    src={bgorg}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
                 </div>
-              </ol>
-            </div>
-
-            {/* Right: Image Section */}
-            <div className="md:w-[50%] flex justify-center">
-              <img
-                src={Ayurvedic1}
-                alt="Ayurveda Treatment"
-                className="rounded-tl-[200px] rounded-bl-[200px] shadow-2xl transform hover:scale-105 transition duration-300 mr-[200px]"
-              />
-            </div>
+                {/* <div className=" absolute top-0 bottom-0 left-0 right-0 rounded-br-[50px] overflow-hidden -z-20 opacity-50 bg-[#B4C785]">
+                </div> */}
+                <img
+                  src={small}
+                  alt=""
+                  className="w-auto absolute h-[80px] top-[-30px] right-[-10px] object-contain"
+                />
+                <div className=" absolute top-[-50px] left-0 w-[170px] h-[150px] bg-[#15f3ff] rounded-tr-[30px]">
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-[#000] text-3xl font-bold flex justify-center mb-5 text-center pt-10">
+                  {item.title}
+                </div>
+                <div className="flex mb-5">{item.overview}</div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold">Benefits : </div>
+                  <div className="">{item.benefits}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
