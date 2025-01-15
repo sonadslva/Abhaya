@@ -36,10 +36,23 @@ const Home = () => {
   const navigate = useNavigate();
 
   const [testimonials,setTestimonials]=useState([])
+  const [activeIndex, setActiveIndex] = useState(0); // Default middle card index
 
-  const handletreatment = () => {
+ 
+  const handleTreatment = () => {
     navigate("/treatment");
+    window.scrollTo(0, 0);
   };
+
+  const handleFacility = () => {
+    navigate("/facilities");
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Ensures scroll to top on initial render
+  }, []);
+
   useEffect(() => {
     const fetchTestimonials = async () => {
         try {
@@ -87,20 +100,23 @@ const treatmentLists = [
             ></video>
           </div>
           <div className="absolute flex flex-col justify-center items-center z-30">
-            <div className="lg:text-[100px] font-black text-[#fff] text-center leading-tight banner-title mb-5">
+            <div className="lg:text-[100px] 5xl:text-[150px] text-[50px] font-black text-[#fff] text-center leading-tight banner-title mb-5">
               Holistic approach
               <span className="block banner-title">of Ayurveda</span>
             </div>
-            <div className="px-2 max-w-[1150px] mx-auto text-[#fff] md:text-xl text-center mb-10">
-              To Keep Alive The Legacy Of Ayurveda By Adapting Modern
-              Innovations Into Holistic Healing Practices In Building A
-              Healthier World.
+            <div className="px-2 4xl:max-w-[1300px] 4xl:w-full w-[1150px] mx-auto text-[#fff] 4xl:text-2xl text-sm md:text-xl text-center mb-10 paraFont">
+              We use modern concepts to combine ancient wisdom with holistic
+              healing approaches in order to maintain and honor the ever-lasting
+              legacy of Ayurveda. We seek to create a healthier, more balanced
+              world for generations to come, by bringing together traditional
+              Ayurvedic concepts and innovative advances to ensure people remain
+              healthy for generations to come.
             </div>
             <div className="flex justify-center items-center gap-2 md:gap-10">
-              <div className="md:px-10 px-8 py-2 text-sm md:text-base rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md">
+              <div className="md:px-10 px-8 py-2 text-sm md:text-base rounded-3xl font-bold 4xl:text-xl bg-[#ffffff] text-[#8acb13] drop-shadow-md">
                 Discover More
               </div>
-              <div className="md:px-10 px-8 md:text-base text-sm py-2 rounded-3xl font-bold border border-[#fff] text-[#8acb13] drop-shadow-md backdrop-blur-md">
+              <div className="md:px-10 px-8 md:text-base text-sm py-2 rounded-3xl font-bold border 4xl:text-xl border-[#fff] text-[#8acb13] drop-shadow-md backdrop-blur-md">
                 More Details
               </div>
             </div>
@@ -113,31 +129,39 @@ const treatmentLists = [
               alt=""
             />
           </div>
+          <div className="absolute z-30 w-full bottom-[1px] h-auto left-0 right-0 rotate-[181deg] opacity-30">
+            <img
+              src={whiteWave}
+              className="w-full h-auto rotate-180 drop-shadow-2xl"
+              alt=""
+            />
+          </div>
         </div>
 
-        
         {/* aboutus */}
         <section className="w-full flex justify-center items-center  flex-col mx-auto relative">
-          <div className=" absolute right-5 top-0 z-20 w-[100px] h-[100px] ayurAnim">
+          <div className=" absolute right-5 top-0 -z-10 md:z-20 md:w-[100px] md:h-[100px] w-[80px] h-[80px] ayurAnim">
             <img
               src={ayurorg}
               alt=""
               className="w-full h-full object-contain drop-shadow-sm"
             />
           </div>
-          <div className=" bg-cover bg-center py-5 px-2 md:px-8 backdrop-blur-md mb-10 max-w-[1400px] mx-auto">
+          <div className=" bg-cover bg-center relative  py-5 px-2 md:px-8 md:backdrop-blur-md mb-2 w-full 4xl:max-w-[1500px] 4xl:w-full max-w-[1400px]  mx-auto">
             <div className="md:flex md:justify-center md:items-center grid-cols-1 place-items-center gap-10">
               {/* left */}
               <div className="md:w-[50%] w-full">
-                <div className="md:text-[50px] text-[30px] font-bold text-[#92C83E] ">
+                <div className="md:text-[50px] text-[30px] font-bold text-[#92C83E] subTitleFont2">
                   About Us
                 </div>
                 <div className="mb-2 paraFont text-sm md:text-base">
-                  <b>Abhaya Ayurveda Hospital</b> is a holistic approach that
-                  integrates the mind, body, and spirit in all aspects of
-                  patient care. We believe that every individual has his or her
-                  own constitution, and it is our's to help everyone achieve
-                  their maximum health potential.
+                  <b className="paraFont font-black">
+                    Abhaya Ayurveda Hospital
+                  </b>{" "}
+                  is a holistic approach that integrates the mind, body, and
+                  spirit in all aspects of patient care. We believe that every
+                  individual has his or her own constitution, and it is our's to
+                  help everyone achieve their maximum health potential.
                 </div>
                 <div>
                   <div className="mb-2 md:text-[50px] text-[30px] font-bold md:font-semibold text-[#92C83E]">
@@ -158,7 +182,7 @@ const treatmentLists = [
                 </div>
               </div>
               {/* right */}
-              <div className="md:w-[50%] py-2">
+              <div className="md:w-[50%] w-full py-2">
                 <div className="relative h-[400px] w-full">
                   <div className="absolute h-[80%] w-[90%] left-0 top-0 bg-[#200] rounded-3xl overflow-hidden">
                     <img
@@ -178,7 +202,6 @@ const treatmentLists = [
               </div>
             </div>
           </div>
-        
         </section>
 
         <div className="w-full h-auto">
@@ -219,7 +242,7 @@ const treatmentLists = [
                 <div className="text-center mt-8">
                   <Link
                     to="/team"
-                    className="flex items-center gap-2 justify-center py-2 px-6 rounded-lg text-lg transition-all"
+                    className="flex items-center gap-2 justify-center py-2 px-6 rounded-lg text-lg transition-all paraFont"
                   >
                     View More
                     <span>
@@ -274,12 +297,30 @@ const treatmentLists = [
             </div>
             <div className="flex justify-center items-center w-full">
               <Swiper
-                slidesPerView={3} // Show three cards at a time
+                centeredSlides={true}
                 autoplay={{
                   delay: 3000,
+                  disableOnInteraction: false,
                 }}
                 loop={true}
+                onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+                onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
                 modules={[Autoplay]}
+                className="w-full"
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    centeredSlides: false,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    centeredSlides: true,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                  },
+                }}
               >
                 {treatmentLists.map((list, index) => (
                   <SwiperSlide key={index}>
@@ -302,7 +343,7 @@ const treatmentLists = [
                           <div className="mt-3">
                             <button
                               className="px-10 py-2 rounded-md border"
-                              onClick={handletreatment}
+                              onClick={handleTreatment}
                             >
                               View More
                             </button>
@@ -370,7 +411,7 @@ const treatmentLists = [
                   Where Care Meets Comfort.
                 </span>
               </div>
-              <div className="md:w-[50%]">
+              <div className="md:w-[50%] paraFont">
                 Our Ayurvedic hospital boasts modern amenities, including
                 well-equipped therapy rooms, serene accommodations, and natural
                 surroundings for a tranquil healing experience. We offer a
@@ -380,7 +421,9 @@ const treatmentLists = [
               </div>
             </div>
             <div className="md:flex gap-5 px-2 md:px-0">
-              <div className="w-full h-[520px] md:w-[60%] flex flex-col object-cover relative -z-10 treatment-bg">
+              {/* Left Section */}
+              <div className="w-full h-[520px] md:w-[60%] flex flex-col object-cover relative treatment-bg">
+                {/* Background Image */}
                 <div className="w-full h-full mix-blend-multiply">
                   <img
                     src={img3}
@@ -388,61 +431,66 @@ const treatmentLists = [
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className=" flex justify-center w-full">
-                  <div className="flex justify-between px-10 items-center w-full absolute bottom-10">
-                    <div className="  bottom-5 text-white flex flex-col leading-tight">
-                      <div className="text-lg ">Gallery</div>
-                      <div className="text-[35px] ">
+                {/* Content Overlay */}
+                <div className="absolute bottom-10 w-full flex justify-center">
+                  <div className="flex justify-between items-center w-[90%] px-5 text-white">
+                    <div className="flex flex-col leading-tight">
+                      <div className="text-lg">Gallery</div>
+                      <div className="text-[35px]">
                         Abhaya Ayurvedic Hospital
                       </div>
                     </div>
-                    <div className="">
-                      <button className="px-10 py-2 rounded-md text-white text-[40px]">
-                        <FaArrowRight />
-                      </button>
-                    </div>
+                    <button
+                      className="px-5 py-2 rounded-md text-white text-[40px] bg-transparent"
+                      onClick={handleFacility}
+                    >
+                      <FaArrowRight />
+                    </button>
                   </div>
                 </div>
               </div>
+
+              {/* Right Section */}
               <div className="md:w-[40%] flex flex-col gap-5">
+                {/* Top Box */}
                 <div className="w-full h-[250px] relative treatment-bg">
-                  <div className="w-full h-[250px]">
-                    <img
-                      src={img5}
-                      alt="room"
-                      className="w-full h-full object-cover mix-blend-multiply"
-                    />
-                  </div>
-                  <div className="absolute bottom-5 text-[#fff] px-5 flex justify-between w-full">
+                  <img
+                    src={img5}
+                    alt="room"
+                    className="w-full h-full object-cover mix-blend-multiply"
+                  />
+                  <div className="absolute bottom-5 w-full px-5 flex justify-between items-center text-white">
                     <div>
                       <div className="text-sm">Gallery</div>
                       <div className="text-xl">Abhaya Ayurvedic Hospital</div>
                     </div>
-                    <div className="">
-                      <button className="px-10 py-2 rounded-md text-white text-[35px]">
-                        <FaArrowRight />
-                      </button>
-                    </div>
+                    <button
+                      className="px-5 py-2 rounded-md text-white text-[35px] bg-transparent"
+                      onClick={handleFacility}
+                    >
+                      <FaArrowRight />
+                    </button>
                   </div>
                 </div>
+
+                {/* Bottom Box */}
                 <div className="w-full h-[250px] relative treatment-bg">
-                  <div className="w-full h-[250px]">
-                    <img
-                      src={img4}
-                      alt="room"
-                      className="w-full h-full object-cover mix-blend-multiply"
-                    />
-                  </div>
-                  <div className="absolute bottom-5 text-[#fff] px-5 flex justify-between w-full">
+                  <img
+                    src={img4}
+                    alt="room"
+                    className="w-full h-full object-cover mix-blend-multiply"
+                  />
+                  <div className="absolute bottom-5 w-full px-5 flex justify-between items-center text-white">
                     <div>
                       <div className="text-sm">Gallery</div>
                       <div className="text-xl">Abhaya Ayurvedic Hospital</div>
                     </div>
-                    <div className="">
-                      <button className="px-10 py-2 rounded-md text-white text-[35px]">
-                        <FaArrowRight />
-                      </button>
-                    </div>
+                    <button
+                      className="px-5 py-2 rounded-md text-white text-[35px] bg-transparent"
+                      onClick={handleFacility}
+                    >
+                      <FaArrowRight />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -451,7 +499,7 @@ const treatmentLists = [
         </section>
 
         {/* Testimonials */}
-        <section className=" mx-auto w-full relative py-10 overflow-hidden flex flex-col justify-start items-center">
+        <section className=" mx-auto w-full relative py-10 overflow-hidden flex flex-col justify-start items-center bg-[#FFF9D9] -z-10">
           <div className=" absolute top-0 bottom-0 right-0 left-0 w-full opacity-50 h-full -z-10">
             {/* <img src={slide} alt="" className="w-full h-full object-cover" /> */}
           </div>
@@ -462,7 +510,7 @@ const treatmentLists = [
             <div className="md:text-[50px] text-[30px] text-center leading-tight mb-3 text-[#92C83E] font-bold">
               Testimonials<span className="block">Voices of Wellness</span>
             </div>
-            <div className="max-w-[900px] mx-auto text-center mb-10">
+            <div className="max-w-[900px] mx-auto text-center mb-10 paraFont">
               Here, our customers share their genuine experiences and stories of
               transformation. Each testimonial reflects the trust and
               satisfaction we strive to deliver. Discover how we’ve made a
@@ -473,7 +521,7 @@ const treatmentLists = [
                 <div className="space-y-6">
                   {testimonials.map((test) => (
                     <div className="bg-white p-6 rounded-lg shadow-md">
-                      <p className="text-gray-800 italic text-sm">
+                      <p className="text-gray-800 italic text-base paraFont">
                         <span>
                           <img src={quotes} alt="" />
                         </span>{" "}
@@ -517,18 +565,19 @@ const treatmentLists = [
               Get Authentic Ayurvedic
               <span className="block">Treatment Today!</span>
             </div>
-            <div className="text-[#fff] max-w-[900px] mx-auto mb-5 text-sm md:text-base px-1 md:px-0">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
-              tenetur blanditiis voluptas reiciendis exercitationem facilis,
-              repellendus praesentium, incidunt debitis est voluptate, iste
-              ducimus quos similique quasi adipisci fuga sed dignissimos.
+            <div className="text-[#fff] max-w-[900px] mx-auto mb-5 text-sm md:text-base px-1 md:px-0 paraFont">
+              Discover the essence of Ayurveda, where ancient wisdom meets
+              modern care. From personalized therapies to natural remedies, we
+              ensure a path to holistic healing and lasting wellness. Your
+              journey to better health starts here.
             </div>
+
             <div className="flex justify-center items-center gap-2 md:gap-10 px-1 md:px-0">
               <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
-                Consultation On Call
+                <a href="tel:+919048121977">Consultation On Call</a>
               </div>
               <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
-                Book Appoinment
+                <a href="https://wa.me/919048121977">Book Appoinment</a>
               </div>
             </div>
           </div>

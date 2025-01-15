@@ -26,6 +26,22 @@
   font-family: 'Petro';
   src: url('../src/fonts/PetrovSans-Black.ttf');
 }
+@font-face {
+  font-family: 'Mintely';
+  src: url('../src/fonts/Mintely-Regular.otf');
+}
+@font-face {
+  font-family: 'Simple Michael';
+  src: url('../src/fonts/Simple Michael.otf');
+}
+@font-face {
+  font-family: 'Nirpa';
+  src: url('../src/fonts/Nirpa.ttf');
+}
+@font-face {
+  font-family: 'Standerd';
+  src: url('../src/fonts/Standerd-Regular.otf');
+}
 *{
   font-family:'myfont3' ;
 }
@@ -44,9 +60,20 @@ body {
   font-family: 'myfont2';
 }
 
-.paraFont{
-  font-family: 'myfont';
+.subTitleFont2{
+  font-family: 'Simple Michael';
 }
+
+.paraFont{
+  font-family: 'Standerd';
+}
+.paraFont2{
+  font-family: 'Standerd';
+}
+.paraFont3{
+  font-family: 'Mintely';
+}
+
 
 
 .ayurAnim{

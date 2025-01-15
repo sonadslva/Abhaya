@@ -2,8 +2,12 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import whiteLogo from "../assets/Abhaya_Logo-white.png";
 import MobileNavbar from "./MobileNavbar";
+import { HiMenuAlt3 } from "react-icons/hi";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOepn] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -19,6 +23,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div>
       <header
@@ -32,12 +37,12 @@ const Navbar = () => {
               <img
                 src={isScrolled ? logo : whiteLogo}
                 alt="Placeholder Logo"
-                className="h-18 w-20"
+                className="h-18 w-20 4xl:h-36 object-contain 4xl:w-36"
               />
             </div>
 
             <nav
-              className={`hidden md:flex space-x-6 ${
+              className={`hidden md:flex space-x-6 4xl:text-2xl ${
                 isScrolled ? "text-[#000000]" : "text-[#ffffff]"
               }`}
             >
@@ -67,12 +72,17 @@ const Navbar = () => {
               </a>
               
             </nav>
+            <div className={`text-3xl md:hidden ${isScrolled ? "text-[#000]" : "text-[#fff]" }`} onClick={() => setMenuOepn(!menuOpen)}>
+              <HiMenuAlt3/>
+            </div>
           </div>
         </div>
       </header>
-      {/* <div>
-        <MobileNavbar/>
-      </div> */}
+      {menuOpen && 
+        <div>
+          <MobileNavbar menuOpen = {menuOpen} setMenuOepn ={setMenuOepn}/>
+        </div>
+      }
     </div>
   );
 };

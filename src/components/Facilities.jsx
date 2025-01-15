@@ -44,26 +44,22 @@ const Facilities = () => {
   };
   return (
     <div>
-      <section className="relative overflow-hidden flex flex-col justify-center items-center h-[700px]">
+      <section className="relative overflow-hidden flex flex-col justify-center items-center h-screen">
         {/* Background images */}
         <div className="absolute w-full h-full top-0 left-0">
           <img src={blackshade} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute w-full h-full -z-10">
-          <img
-            src={slide2}
-            alt="ayur"
-            className="w-full h-full object-cover"
-          />
+          <img src={slide2} alt="ayur" className="w-full h-full object-cover" />
         </div>
 
         {/* Content */}
         <div className="absolute z-30 flex flex-col justify-center items-center text-center w-full h-full">
-          <div className="text-[100px] font-black text-[#fff] leading-tight banner-title mb-5">
+          <div className="md:text-[100px] text-[50px] font-black text-[#fff] leading-tight banner-title mb-5">
             Lorem ipsum dolor sit{" "}
             <span className="block banner-title">amet consectetur</span>
           </div>
-          <div className="px-2 max-w-[1150px] mx-auto text-[#fff] md:text-xl mb-10">
+          <div className="px-2 max-w-[1150px] mx-auto text-sm paraFont text-[#fff] md:text-xl mb-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
             ratione, hic culpa ullam minus labore veritatis similique aut
             expedita accusantium molestias repudiandae odio corrupti temporibus
@@ -77,112 +73,200 @@ const Facilities = () => {
           </div>
         </div>
         <div className=" absolute bottom-0 left-0 right-0 w-full">
-                  <img src={facwave} alt="" className="w-full object-cover"/>
-                </div>
+          <img src={facwave} alt="" className="w-full object-cover" />
+        </div>
+        <div className="absolute z-10 w-full bottom-3 h-auto left-0 right-0 rotate-[181deg] opacity-30">
+          <img src={facwave} className="w-full h-auto rotate-180" alt="" />
+        </div>
       </section>
 
-      <section className="w-full bg-[#f1dace] relative">
+      <section className="w-full bg-[#f1dace] relative py-10 mb-10 md:mb-0">
         <div className="w-full max-w-[1400px] m-auto">
-          <div className="grid grid-cols-1 w-full place-items-center md:grid-cols-2 gap-10 ">
+          <div className="grid grid-cols-1 w-full place-items-center md:grid-cols-2 gap-10 px-2 md:px-0">
             {/* Left */}
-            <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-3 relative z-40 overflow-y-scroll max-h-[800px] no-scrollbar ">
+            <div className=" w-full grid grid-cols-2 md:grid-cols-2 gap-3 relative z-40 overflow-y-scroll max-h-[800px] no-scrollbar ">
               <div className=" flex flex-col w-full gap-3 pt-20">
                 <div className="w-full h-[400px] rounded-tr-[30px] rounded-bl-[30px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] overflow-hidden relative">
                   <div className="absolute top-0 bottom-0 right-0 left-0">
-                    <img src={blackshade} className="w-full h-full opacity-50" alt="" />
+                    <img
+                      src={blackshade}
+                      className="w-full h-full opacity-50"
+                      alt=""
+                    />
                   </div>
-                  <img src={fac1} className="w-full h-full object-cover" alt="" />
+                  <img
+                    src={fac1}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
                 </div>
                 <div className="w-full h-[400px] rounded-tl-[30px] rounded-br-[30px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] overflow-hidden relative">
                   <div className="absolute top-0 bottom-0 right-0 left-0">
-                    <img src={blackshade} className="w-full h-full opacity-50" alt="" />
+                    <img
+                      src={blackshade}
+                      className="w-full h-full opacity-50"
+                      alt=""
+                    />
                   </div>
-                  <img src={fac2} className="w-full h-full object-cover" alt="" />
+                  <img
+                    src={fac2}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-3 ">
                 <div className="w-full h-[400px] rounded-tl-[30px] rounded-br-[30px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] overflow-hidden relative">
                   <div className="absolute top-0 bottom-0 right-0 left-0">
-                    <img src={blackshade} className="w-full h-full opacity-50" alt="" />
+                    <img
+                      src={blackshade}
+                      className="w-full h-full opacity-50"
+                      alt=""
+                    />
                   </div>
-                  <img src={fac3} className="w-full h-full object-cover" alt="" />
+                  <img
+                    src={fac3}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
                 </div>
                 <div className="w-full h-[400px] rounded-tr-[30px] rounded-bl-[30px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] overflow-hidden relative">
                   <div className="absolute top-0 bottom-0 right-0 left-0">
-                    <img src={blackshade} className="w-full h-full opacity-50" alt="" />
+                    <img
+                      src={blackshade}
+                      className="w-full h-full opacity-50"
+                      alt=""
+                    />
                   </div>
-                  <img src={fac4} className="w-full h-full object-cover" alt="" />
+                  <img
+                    src={fac4}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
             {/* Right */}
             <div>
-              <div className="text-[#202020] font-semibold">Lorem ipsum dolor sit</div>
-              <div className="font-bold text-[50px] text-[#053630]">Lorem ipsum dolor sit</div>
-              <div className="font-semibold text-[#202020] flex justify-end mb-5">Lorem ipsum dolor sit Lorem ipsum dolor sit</div>
-              <div className="mb-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis odit, ad nesciunt aperiam quae exercitationem eligendi ex voluptate. Nostrum porro voluptates perferendis illum esse cumque, neque voluptatibus tenetur nulla ipsam?</div>
+              <div className="text-[#202020] font-semibold text-sm md:text-base">
+                Lorem ipsum dolor sit
+              </div>
+              <div className="font-bold md:text-[50px] text-[30px] leading-tight text-[#053630]">
+                Lorem ipsum dolor sit
+              </div>
+              <div className="font-semibold text-[#202020] text-sm md:text-base flex justify-end mb-5">
+                Lorem ipsum dolor sit Lorem ipsum dolor sit
+              </div>
+              <div className="mb-10 text-sm md:text-base paraFont">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis
+                odit, ad nesciunt aperiam quae exercitationem eligendi ex
+                voluptate. Nostrum porro voluptates perferendis illum esse
+                cumque, neque voluptatibus tenetur nulla ipsam?
+              </div>
               <div className="flex flex-col justify-center gap-5">
-                <div className="px-4 py-5 rounded-tl-3xl rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative"><span className="w-[40px] h-[40px] absolute right-0 top-[-15px]"><img src={small} alt="" className="w-full h-full object-contain"/></span> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, vero Lorem</div>
-                <div className="px-4 py-5 rounded-tl-3xl rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative"><span className="w-[40px] h-[40px] absolute right-0 top-[-15px]"><img src={small} alt="" className="w-full h-full object-contain"/></span> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, vero Lorem</div>
-                <div className="px-4 py-5 rounded-tl-3xl rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative"><span className="w-[40px] h-[40px] absolute right-0 top-[-15px]"><img src={small} alt="" className="w-full h-full object-contain"/></span> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, vero Lorem</div>
-                <div className="px-4 py-5 rounded-tl-3xl rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative"><span className="w-[40px] h-[40px] absolute right-0 top-[-15px]"><img src={small} alt="" className="w-full h-full object-contain"/></span> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, vero Lorem</div>
+                <div className="px-4 py-5 rounded-tl-3xl paraFont rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative">
+                  <span className="w-[40px] h-[40px] absolute right-0 top-[-15px]">
+                    <img
+                      src={small}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />
+                  </span>{" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+                  vero Lorem
+                </div>
+                <div className="px-4 py-5 paraFont rounded-tl-3xl rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative">
+                  <span className="w-[40px] h-[40px] absolute right-0 top-[-15px]">
+                    <img
+                      src={small}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />
+                  </span>{" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+                  vero Lorem
+                </div>
+                <div className="px-4 py-5 paraFont rounded-tl-3xl rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative">
+                  <span className="w-[40px] h-[40px] absolute right-0 top-[-15px]">
+                    <img
+                      src={small}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />
+                  </span>{" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+                  vero Lorem
+                </div>
+                <div className="px-4 paraFont py-5 rounded-tl-3xl rounded-br-3xl backdrop-blur-sm bg-[#ffffff74] relative">
+                  <span className="w-[40px] h-[40px] absolute right-0 top-[-15px]">
+                    <img
+                      src={small}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />
+                  </span>{" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+                  vero Lorem
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
       </section>
 
-      <div className="w-full mt-[-10px] mb-10 relative">
-      <div className="absolute right-2 bottom-10 z-40">
-          <img src={bgimg} alt=""  className="w-[200px] h-[200px] "/>
+      <div className="hidden md:flex w-full mt-[-10px] mb-10 relative">
+        <div className="absolute right-2 bottom-10 z-40">
+          <img src={bgimg} alt="" className="w-[200px] h-[200px] " />
         </div>
-        <img src={beigewaveorg} alt="" className="w-full h-full object-cover rotate-180"/>
+        <img
+          src={beigewaveorg}
+          alt=""
+          className="w-full h-full object-cover rotate-180"
+        />
       </div>
 
       <section className="mb-20 w-full">
-      <div className="w-full">
-        <div className="text-[50px] text-center mb-10 font-bold">Gallery</div>
-        <div className="grid grid-cols-1 place-items-center md:grid-cols-3 lg:grid-cols-3 w-full gap-5 max-w-[1400px] mx-auto">
-          
+        <div className="w-full">
+          <div className="md:text-[50px] text-[30px] text-center mb-5 md:mb-10 font-bold">
+            Gallery
+          </div>
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-3 lg:grid-cols-3 w-full gap-5 max-w-[1400px] mx-auto">
             {images.map((image) => (
-              <div
-                key={image.id}
-                className="w-full h-[300px] cursor-pointer"
-                onClick={() => openModal(image)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-full h-[330px] p-4 border-[#8acb13] border border-[ridge] shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]">
+                <div
+                  key={image.id}
+                  className="w-full h-[300px] cursor-pointer"
+                  onClick={() => openModal(image)}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             ))}
-          
-          
-          
+          </div>
         </div>
-      </div>
 
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 backdrop-blur-sm">
-           <button
+        {selectedImage && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 backdrop-blur-sm">
+            <button
               className="absolute top-10 right-10 text-white text-3xl"
               onClick={closeModal}
             >
               &times;
             </button>
-          <div className="relative">
-           
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="max-w-full max-h-screen rounded-lg"
-            />
+            <div className="relative">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="max-w-full max-h-screen rounded-lg"
+              />
+            </div>
           </div>
-        </div>
-      )}
-    </section>
+        )}
+      </section>
     </div>
   );
 };

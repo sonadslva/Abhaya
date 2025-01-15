@@ -57,16 +57,16 @@ const ContactUs = () => {
 
         {/* Content */}
         <div className="absolute z-30 flex flex-col justify-center items-center text-center w-full h-full">
-          <div className="text-[100px] font-black text-[#fff] leading-tight banner-title mb-5">
+          <div className="md:text-[100px] text-[35px] font-black text-[#fff] leading-tight banner-title mb-5">
             Lorem ipsum dolor sit
             <span className="block banner-title">amet consectetur</span>
           </div>
-          <div className="px-2 max-w-[1150px] mx-auto text-[#fff] md:text-xl mb-10">
+          <div className="px-2 max-w-[1150px] text-sm mx-auto text-[#fff] md:text-xl mb-10 paraFont">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
             ratione, hic culpa ullam minus labore veritatis similique aut
-            expedita accusantium molestias repudiandae odio corrupti temporibus
+            expedita accusantium molestias <span className="hidden md:flex">repudiandae odio corrupti temporibus
             ducimus beatae eligendi dolorum ipsum. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Quis odio perferendis
+            consectetur adipisicing elit. Quis odio perferendis</span>
           </div>
           <div className="flex justify-center items-center gap-2 md:gap-10">
             <div className="px-10 py-2 rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md">
@@ -82,22 +82,22 @@ const ContactUs = () => {
       <section className="w-full mb-10 flex flex-col justify-center items-center">
         <div className="text-center">
           <div className="text-center font-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur lorem</div>
-          <div className="text-[50px] relative">Get In Touch
-            <span className="absolute top-[-5px]" ><img src={dec} alt="" className=" w-[200px] h-[100px] object-contain" /></span>
-            <span className="absolute top-[-5px] left-[-19px]" ><img src={dec} alt="" className=" w-[200px] h-[100px] transform scale-x-[-1] object-contain" /></span>
+          <div className="md:text-[70px] text-[30px] relative paraFont3">Get In Touch
+            <span className="absolute top-[-5px] w-auto h-[60px] md:h-[100px]" ><img src={dec} alt="" className=" w-full h-full object-contain" /></span>
+            <span className="absolute top-[-5px] md:top-[-10px] left-2 md:left-2 w-auto h-[60px] md:h-[100px]" ><img src={dec} alt="" className=" w-full h-full transform scale-x-[-1] object-contain" /></span>
           </div>
         </div>
       </section>
 
       <section className="w-full mb-10">
         <div className="w-full max-w-[1400px] mx-auto">
-          <div className="w-full max-w-[1200px] mx-auto h-[600px] bg-[#b84545] rounded-3xl grid grid-cols-1 place-items-center md:grid-cols-12">
+          <div className="w-full max-w-[1200px] mx-auto md:h-[600px] rounded-3xl grid grid-cols-1 place-items-center md:grid-cols-12">
             {/* Left */}
             <div className="md:col-span-4 h-full w-full rounded-l-3xl relative">
-              <div className="w-full h-full rounded-l-3xl overflow-hidden">
+              <div className="w-full hidden md:flex h-full rounded-l-3xl overflow-hidden">
                 <img src={fac3} alt="" className="w-full h-full object-cover" />
               </div>
-              <div className=" absolute h-[70%] w-[300px] rounded-3xl bg-[#000000b1] left-[-100px] top-24 backdrop-blur-sm flex flex-col justify-center items-center gap-5">
+              <div className=" md:absolute md:h-[70%] w-full md:w-[300px] rounded-t-3xl py-10 md:py-0 md:rounded-3xl bg-[#00863c] md:bg-[#000000b1] left-[-100px] top-24 backdrop-blur-sm flex flex-col justify-center items-center gap-5">
                 <div className="flex flex-col justify-center items-center px-2 gap-1">
                   <div className="text-[#fff] font-bold text-xl flex items-center gap-2">
                     <span>
@@ -135,7 +135,7 @@ const ContactUs = () => {
               </div>
             </div>
             {/* Right */}
-            <div className="col-span-8 h-full w-full bg-[#92C83E] rounded-r-3xl py-10 px-5">
+            <div className="col-span-8 h-full w-full bg-[#92c83e] md:rounded-r-3xl rounded-b-3xl py-10 px-5">
               <div className="text-center mb-10 text-[40px] text-[#fff] font-bold">
                 Contact Form
               </div>

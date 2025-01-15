@@ -186,16 +186,20 @@ const Team = () => {
 
           {/* Content */}
           <div className="absolute z-30 flex flex-col justify-center items-center text-center w-full h-full">
-            <div className="text-[100px] font-black text-[#fff] leading-tight banner-title mb-5">
-              Lorem ipsum dolor sit{" "}
-              <span className="block banner-title">amet consectetur</span>
+            <div className="md:text-[100px] text-[35px] font-black text-[#fff] leading-tight banner-title md:mb-5 mb-2">
+              Ayurveda – The Science of Life,
+              <span className="block banner-title">
+                Healing Beyond Boundaries
+              </span>
             </div>
-            <div className="px-2 max-w-[1150px] mx-auto text-[#fff] md:text-xl mb-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              ratione, hic culpa ullam minus labore veritatis similique aut
-              expedita accusantium molestias repudiandae odio corrupti
-              temporibus ducimus beatae eligendi dolorum ipsum. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quis odio perferendis
+            <div className="px-2 max-w-[1150px] mx-auto text-sm lg:text-base text-[#fff] md:text-xl mb-10 paraFont">
+              Discover the profound healing power of Ayurveda, an ancient
+              practice that nurtures both body and mind. At Abhaya Ayurvedic we
+              believe in restoring harmony through nature’s wisdom. <span className="hidden md:flex">Our
+              treatments are designed to not just alleviate symptoms, but to
+              bring about deep, lasting wellness. Every therapy is a step
+              towards your holistic well-being, helping you live life in balance
+              and vitality.</span>
             </div>
             <div className="flex justify-center items-center gap-2 md:gap-10">
               <div className="px-10 py-2 rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md">
@@ -203,24 +207,30 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className=" absolute bottom-0 left-0 right-0 w-full">
+          <div className=" absolute bottom-[-10px] z-40 left-0 right-0 w-full">
             <img src={whiteWave} alt="" className="w-full object-cover" />
+          </div>
+          <div className="absolute z-10 w-full bottom-1 h-auto left-0 right-0 rotate-[181deg] opacity-30">
+            <img src={whiteWave} className="w-full h-auto rotate-180" alt="" />
           </div>
         </section>
       </div>
 
       {/* Treatment */}
 
-      <section className="text-center w-full flex flex-col justify-center items-center mb-10 relative" id="treatment-services">
-        <div className=" absolute right-0 top-[-35px] w-auto h-[350px]">
+      <section
+        className="text-center w-full flex flex-col justify-center items-center md:mb-10 relative"
+        id="treatment-services"
+      >
+        <div className=" absolute z-[10] right-0 md:top-[-35px] top-[-10px] w-auto md:h-[350px] h-[150px]">
           <img
             src={leaf}
             alt=""
             className="w-full h-full object-contain leafAnimation"
           />
         </div>
-        <div className="max-w-[1400px] mx-auto pt-20">
-          <div className="flex justify-center items-center md:mt-[-140px]">
+        <div className="max-w-[1400px] mx-auto md:pt-20 pt-20 px-2">
+          <div className="md:flex grid -z-10 grid-cols-1 place-items-center px-2 md:px-0 justify-center items-center md:mt-[-140px]">
             <div className="">
               <div className="w-[400px] h-[550px] bg-[#bc5555] relative">
                 <img
@@ -230,27 +240,29 @@ const Team = () => {
                 />
               </div>
             </div>
-            <div className="w-[400px] h-[550px] mt-28 bg-[#621313] relative">
+            <div className="w-[400px] h-[550px] md:mt-28 bg-[#621313] relative">
               <img src={middle} alt="" className="w-full h-full object-cover" />
             </div>
-            <div className="w-[400px] h-[550px] mt-60 bg-[#393838] relative">
+            <div className="w-[400px] h-[550px] md:mt-60 bg-[#393838] relative">
               <img src={treat6} alt="" className="w-full h-full object-cover" />
             </div>
           </div>
-          <div className=" absolute bottom-0 left-2 w-[250px] h-[250px] rounded-full overflow-hidden">
+          <div className=" absolute bottom-0 left-2 w-[250px] h-[250px] hidden md:flex rounded-full overflow-hidden">
             <img src={aaa} alt="" />
           </div>
           <div></div>
         </div>
       </section>
 
-      <section className="mb-20 relative py-10 bg-[#FFF9D9]" id="treatment-treatments" >
-       
-        <div className="  h-[700px]">
-          <div className="text-[50px] font-bold text-center mb-3 mt-10">
-            Lorem ipsum dolor
+      <section
+        className="mb-20 relative py-10 bg-[#FFF9D9]"
+        id="treatment-treatments"
+      >
+        <div className=" h-[700px]">
+          <div className="md:text-[50px] text-[30px] font-bold text-center mb-3">
+            Our Treatments
           </div>
-          <div className="mb-10 text-center max-w-[1000px] mx-auto">
+          <div className="mb-10 text-center max-w-[1000px] mx-auto text-sm md:text-base px-1 md:px-0 paraFont">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Asperiores, sapiente soluta rem quae suscipit distinctio error quam
             quos neque iure debitis totam facere esse animi provident tempore
@@ -262,27 +274,27 @@ const Team = () => {
           {/* Slider */}
           <div className="w-full flex justify-center items-center max-w-[1400px] mx-auto">
             <Swiper
-              centeredSlides={true} 
+              centeredSlides={true}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
               }}
-              loop={true} 
-              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} 
+              loop={true}
+              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
               onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
               modules={[Autoplay]}
               className="w-full"
               breakpoints={{
                 640: {
-                  slidesPerView: 1, 
-                  centeredSlides: false, 
+                  slidesPerView: 1,
+                  centeredSlides: false,
                 },
                 768: {
-                  slidesPerView: 2, 
+                  slidesPerView: 2,
                   centeredSlides: true,
                 },
                 1024: {
-                  slidesPerView: 3, 
+                  slidesPerView: 3,
                   centeredSlides: true,
                 },
               }}
@@ -316,23 +328,30 @@ const Team = () => {
             </Swiper>
           </div>
           {selectedTreatment && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white w-[80%] max-w-[800px] p-6 rounded-lg">
-            <button onClick={closeModal} className="absolute top-3 right-3 text-xl text-gray-600">X</button>
-            <img
-              src={selectedTreatment.img}
-              alt={selectedTreatment.title}
-              className="w-full h-[400px] object-cover rounded-md"
-            />
-            <h3 className="text-2xl font-bold mt-4">{selectedTreatment.title}</h3>
-            <p className="text-lg mt-2">{selectedTreatment.fullDesc}</p>
-          </div>
-        </div>
-      )}
+            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+              <div className="bg-white w-[80%] max-w-[800px] p-6 rounded-lg">
+                <button
+                  onClick={closeModal}
+                  className="absolute top-3 right-3 text-xl text-gray-600"
+                >
+                  X
+                </button>
+                <img
+                  src={selectedTreatment.img}
+                  alt={selectedTreatment.title}
+                  className="w-full h-[400px] object-cover rounded-md"
+                />
+                <h3 className="text-2xl font-bold mt-4">
+                  {selectedTreatment.title}
+                </h3>
+                <p className="text-lg mt-2">{selectedTreatment.fullDesc}</p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
-      <section className="w-full relative py-10 overflow-hidden rounded-t-[60%] mb-20">
+      <section className="w-full relative overflow-hidden mb-20">
         <div className=" absolute top-0 bottom-0 left-0 right-0 -z-10 opacity-60 w-full">
           <img
             src={bottomSide}
@@ -341,10 +360,10 @@ const Team = () => {
           />
         </div>
         <div className="max-w-[1400px] mx-auto">
-          <div className="text-[50px] font-bold text-center mb-2">
+          <div className="md:text-[50px] text-[30px] font-bold text-center mb-2">
             Lorem ipsum dolor sit
           </div>
-          <div className="text-center max-w-[1000px] mx-auto">
+          <div className="text-center max-w-[1000px] mx-auto text-sm md:text-base px-2 md:px-0 paraFont">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
             consequatur dolores harum nihil soluta id, quo quae repellat quasi
             provident, odit aliquam adipisci sunt laborum vero, repellendus illo
@@ -356,11 +375,11 @@ const Team = () => {
         </div>
       </section>
 
-      <section className="w-full mb-10 py-10">
+      <section className="w-full mb-10 py-10 px-2 md:px-0">
         <div className="w-full max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 gap-20 max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 md:gap-20 gap-32 max-w-[1400px] mx-auto">
             {services.map((item) => (
-              <div className="w-full h-[350px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] relative rounded-br-[50px] px-4 py-5">
+              <div className="w-full md:h-[350px] h-[300px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] relative rounded-br-[50px] px-4 py-5">
                 <div className=" absolute top-0 bottom-0 left-0 right-0 rounded-br-[50px] overflow-hidden opacity-20">
                   <img
                     src={bgorg}
@@ -373,22 +392,22 @@ const Team = () => {
                 <img
                   src={small}
                   alt=""
-                  className="w-auto absolute h-[80px] top-[-30px] right-[-10px] object-contain"
+                  className="w-auto absolute h-[80px] md:top-[-30px] top-[-40px] right-[-10px] object-contain"
                 />
-                <div className=" absolute top-[-50px] left-0 w-[170px] h-[150px] bg-[#15f3ff] rounded-tr-[30px]">
+                <div className=" absolute md:top-[-50px] top-[-80px] left-0 w-[170px] h-[150px] bg-[#15f3ff] rounded-tr-[30px]">
                   <img
                     src={item.image}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="text-[#000] text-3xl font-bold flex justify-center mb-5 text-center pt-10">
+                <div className="text-[#000] text-3xl font-bold flex justify-center mb-2 md:mb-5 text-center pt-14 md:pt-10">
                   {item.title}
                 </div>
-                <div className="flex mb-5">{item.overview}</div>
+                <div className="flex md:mb-5 mb-2 text-sm md:text-base text-center md:text-start paraFont">{item.overview}</div>
                 <div className="flex flex-col gap-2">
                   <div className="font-bold">Benefits : </div>
-                  <div className="">{item.benefits}</div>
+                  <div className="paraFont text-sm md:text-base">{item.benefits}</div>
                 </div>
               </div>
             ))}
