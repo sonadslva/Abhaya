@@ -13,7 +13,7 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Dhara from "../assets/Dharaa.jpg";
 import navarakizi from "../assets/navarakizhi.jpg";
-import elakizhi from "../assets/elakizhi.jpg";
+import elakizhi from "../assets/ELAKIZHI.jpg";
 import pizhichil from "../assets/pizichill.jpg";
 import Shirodhara from "../assets/Shirodhara.jpg";
 import kashayadhara from "../assets/kashayadhara.jpg";
