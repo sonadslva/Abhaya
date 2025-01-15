@@ -13,7 +13,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-
+import ayurBg from "../assets/ayurBg.jpg"
+import greenShade from "../assets/black-shade.png"
 const Packages = () => {
 
   const packageLists = [
@@ -176,25 +177,41 @@ const Packages = () => {
         </div>
       </section>
 
-      <section className=" relative flex flex-col justify-center items-center backdrop-blur-sm  bg-cover bg-center  inset-0 py-10">
-        <div className=" absolute top-0 bottom-0 left-0 right-0 h-full w-full -z-10  ">
-          <img
-            src={pback}
-            className="h-full w-full blur-background backdrop-blur-sm object-cover "
-            alt=""
-          />
-        </div>
-        <div className="rounded-xl  mx-auto px-2">
-          <h1 className="text-4xl font-bold text-[#fff] text-center mb-5">
-            Ayurvedic Center Packages
-          </h1>
-          <div className="text-[#fff] text-sm md:text-base text-center paraFont">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quam
-            maiores similique obcaecati dolorum voluptates eius, assumenda est
-            repellendus nesciunt.
-          </div>
-        </div>
-      </section>
+      
+        <section className="w-full flex justify-center items-center mx-auto relative py-10">
+                      <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
+                        <img src={ayurBg} alt="" className="w-full h-full object-cover" />
+                      </div>
+                      <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
+                        <img
+                          src={greenShade}
+                          alt=""
+                          className="w-full h-full object-cover opacity-90"
+                        />
+                      </div>
+                      <div className="max-w-[1400px] w-full relative z-20 flex flex-col justify-center items-center text-center">
+                        <div className="text-[#ebe420] mb-3">Ayurveda Treatments</div>
+                        <div className="text-[30px] leading-tight text-[#fff] font-bold mb-3">
+                          Get Authentic Ayurvedic
+                          <span className="block">Treatment Today!</span>
+                        </div>
+                        <div className="text-[#fff] max-w-[900px] mx-auto mb-5 text-sm md:text-base px-1 md:px-0 paraFont">
+                          Discover the essence of Ayurveda, where ancient wisdom meets
+                          modern care. From personalized therapies to natural remedies, we
+                          ensure a path to holistic healing and lasting wellness. Your
+                          journey to better health starts here.
+                        </div>
+            
+                        <div className="flex justify-center items-center gap-2 md:gap-10 px-1 md:px-0">
+                          <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
+                            <a href="tel:+919048121977">Consultation On Call</a>
+                          </div>
+                          <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
+                            <a href="https://wa.me/919048121977">Book Appoinment</a>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
     </div>
   );
 };

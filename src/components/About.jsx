@@ -10,7 +10,8 @@ import whiteWave from "../assets/whitewave.png";
 import t1 from "../assets/t1.jpg"
 import c1 from "../assets/circle.jpg"
 import c2 from "../assets/fac4.jpg"
-
+import ayurBg from "../assets/ayurBg.jpg"
+import greenShade from "../assets/black-shade.png"
 const Team = () => {
   const [activeDoctor, setActiveDoctor] = useState(null);
 
@@ -258,6 +259,40 @@ const Team = () => {
           </div>
         </div>
       </section>
+       <section className="w-full flex justify-center items-center mx-auto relative py-10">
+                <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
+                  <img src={ayurBg} alt="" className="w-full h-full object-cover" />
+                </div>
+                <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
+                  <img
+                    src={greenShade}
+                    alt=""
+                    className="w-full h-full object-cover opacity-90"
+                  />
+                </div>
+                <div className="max-w-[1400px] w-full relative z-20 flex flex-col justify-center items-center text-center">
+                  <div className="text-[#ebe420] mb-3">Ayurveda Treatments</div>
+                  <div className="text-[30px] leading-tight text-[#fff] font-bold mb-3">
+                    Get Authentic Ayurvedic
+                    <span className="block">Treatment Today!</span>
+                  </div>
+                  <div className="text-[#fff] max-w-[900px] mx-auto mb-5 text-sm md:text-base px-1 md:px-0 paraFont">
+                    Discover the essence of Ayurveda, where ancient wisdom meets
+                    modern care. From personalized therapies to natural remedies, we
+                    ensure a path to holistic healing and lasting wellness. Your
+                    journey to better health starts here.
+                  </div>
+      
+                  <div className="flex justify-center items-center gap-2 md:gap-10 px-1 md:px-0">
+                    <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
+                      <a href="tel:+919048121977">Consultation On Call</a>
+                    </div>
+                    <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
+                      <a href="https://wa.me/919048121977">Book Appoinment</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
     </div>
   );
 };

@@ -144,14 +144,14 @@ const treatmentLists = [
             <img
               src={ayurorg}
               alt=""
-              className="w-full h-full object-contain drop-shadow-sm"
+              className="w-full h-full object-contain "
             />
           </div>
-          <div className=" bg-cover bg-center relative  py-5 px-2 md:px-8 md:backdrop-blur-md mb-2 w-full 4xl:max-w-[1500px] 4xl:w-full max-w-[1400px]  mx-auto">
+          <div className=" bg-cover bg-center relative  py-5 px-2 md:px-8  mb-2 w-full 4xl:max-w-[1500px] 4xl:w-full max-w-[1400px]  mx-auto">
             <div className="md:flex md:justify-center md:items-center grid-cols-1 place-items-center gap-10">
               {/* left */}
               <div className="md:w-[50%] w-full">
-                <div className="md:text-[50px] text-[30px] font-bold text-[#92C83E] subTitleFont2">
+                <div className="md:text-[50px] text-[30px] font-bold text-[#92C83E] ">
                   About Us
                 </div>
                 <div className="mb-2 paraFont text-sm md:text-base">
@@ -239,7 +239,7 @@ const treatmentLists = [
                   exceptional healthcare, combining expertise, compassion, and
                   innovation to transform lives.
                 </div>
-                <div className="text-center mt-8">
+                {/* <div className="text-center mt-8">
                   <Link
                     to="/team"
                     className="flex items-center gap-2 justify-center py-2 px-6 rounded-lg text-lg transition-all paraFont"
@@ -249,14 +249,14 @@ const treatmentLists = [
                       <HiArrowRight />
                     </span>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </section>
 
-        <div className="mb-10 w-full mt-[-10px] h-full relative">
-          <div className="absolute right-2 bottom-1 z-40">
+        <div className=" mb-10 w-full mt-[-10px] h-full relative">
+          <div className="absolute right-2 bottom-[-30px] z-40 ">
             <img
               src={cimg}
               alt=""
