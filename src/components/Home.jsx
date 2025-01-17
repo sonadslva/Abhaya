@@ -592,7 +592,7 @@ const facilitiesList = [
               >
                 {treatmentLists.map((list, index) => (
                   <SwiperSlide key={index}>
-                    <div className="w-full h-[450px] flex flex-col object-cover relative -z-10 treatment-bg">
+                    <div className="w-full h-[450px] flex flex-col object-cover relative z-10 treatment-bg ">
                       <div className="w-full h-[450px] mix-blend-multiply">
                         <img
                           src={list.image}
@@ -609,12 +609,12 @@ const facilitiesList = [
                             {list.description || "Ayurvedic Therapy"}
                           </div>
                           <div className="mt-3">
-                            <button
+                            <a href="/treatment"><button
                               className="px-10 py-2 rounded-md border"
-                              onClick={handleTreatment}
+                              
                             >
                               View More
-                            </button>
+                            </button></a>
                           </div>
                         </div>
                       </div>
