@@ -6,15 +6,15 @@ import img4 from "../assets/abhayaroom5.jpeg";
 import img5 from "../assets/abhayaroom6.jpeg";
 import img6 from "../assets/abhayaroom7.jpeg";
 import img7 from '../assets/abhayatreatment.jpeg';
-import img8 from '../assets/abhayatreatmentroom.jpg'
-import img9 from '../assets/abhayarooms1.jpg'
+import img8 from '../assets/treatmentroom2.jpg'
+import img9 from '../assets/room3.jpg'
 import blackshade from "../assets/black-shade.png"
 import small from "../assets/small.png"
 import beigewaveorg from "../assets/beigewaveorg.png"
-import fac1 from "../assets/fac1.jpg"
-import fac2 from "../assets/fac2.jpg"
+import fac1 from "../assets/room4.jpg"
+import fac2 from "../assets/treatmentroom1.jpg"
 import fac3 from "../assets/farmacy.png"
-import fac4 from "../assets/fac4.jpg"
+import fac4 from "../assets/room1.jpg"
 import facwave from "../assets/facwave.png"
 import bgimg from "../assets/bgimg.png"
 import slide2 from "../assets/b1.jpg"
@@ -23,7 +23,10 @@ import greenShade from "../assets/black-shade.png"
 import { useInView } from "react-intersection-observer";
 import {motion} from "framer-motion"
 import LocomotiveScroll from "locomotive-scroll";
-import img10 from '../assets/room3.jpg'
+import img10 from '../assets/gallery1.png'
+import img11 from '../assets/gallery2.png'
+import img12 from '../assets/team1.png'
+import img13 from '../assets/team2.png'
 import { FaWhatsapp } from "react-icons/fa6";
 const Facilities = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -47,16 +50,19 @@ const Facilities = () => {
     }, []);
 
   const images = [
-    { id: 1, src: img1, alt: "Image 1" },
-    { id: 2, src: img2, alt: "Image 2" },
-    { id: 3, src: img5, alt: "Image 3" },
-    { id: 4, src: img7, alt: "Image 4" },
-    { id: 5, src: img6, alt: "Image 5" },
-    { id: 6, src: img4, alt: "Image 6" },
-    { id: 7, src: img8, alt: "Image 8" },
-    { id: 8, src: img9, alt: "Image 9" },
-    { id: 9, src: img3, alt: "Image 3" },
-    { id: 10, src: img10, alt: "Image 10" },
+    { id: 1, src: img1, alt: "img1" },
+    { id: 2, src: img2, alt: "img2" },
+    { id: 3, src: img6, alt: "img6" },
+    { id: 4, src: img7, alt: "img7" },
+    { id: 5, src: img5, alt: "img5" },
+    { id: 6, src: img8, alt: "img8" },
+    { id: 7, src: img3, alt: "img3" },
+    { id: 8, src: img4, alt: "img4" },
+    { id: 9, src: img9, alt: "img9" },
+    { id: 10, src: img10, alt: "img10" },
+    { id: 11, src: img11, alt: "img11" },
+    { id: 12, src: img12, alt: "img12" },
+    { id: 13, src: img13, alt: "img13" },
 
   ];
 
