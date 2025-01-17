@@ -26,7 +26,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import img10 from '../assets/gallery1.png'
 import img11 from '../assets/gallery2.png'
 import img12 from '../assets/team1.png'
-import img13 from '../assets/team2.png'
+import img13 from '../assets/team2.jpg'
 import { FaWhatsapp } from "react-icons/fa6";
 const Facilities = () => {
   const [selectedImage, setSelectedImage] = useState(null);
