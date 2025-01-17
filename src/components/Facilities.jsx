@@ -101,7 +101,7 @@ const Facilities = () => {
     };
 
   return (
-    <div>
+    <div className="overflow-hidden">
         <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
                 <a href="tel:+919048121977">
                   <FaWhatsapp />

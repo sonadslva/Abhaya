@@ -213,7 +213,7 @@ const facilitiesList = [
               Holistic approach
               <span className="block banner-title">of Ayurveda</span>
             </div>
-            <div className="px-2 4xl:max-w-[1300px] xxl:w-[1100px] 4xl:w-full mx-auto text-[#fff] 4xl:text-2xl text-sm md:text-xl text-center mb-10 paraFont">
+            <div className="px-2 max-w-[1100px] 4xl:w-full mx-auto text-[#fff] 4xl:text-2xl text-sm md:text-xl text-center mb-10 paraFont">
               We use modern concepts to combine ancient wisdom with holistic
               healing approaches in order to maintain and honor the ever-lasting
               legacy of Ayurveda. We seek to create a healthier, more balanced
@@ -268,7 +268,7 @@ const facilitiesList = [
                     ? { x: 0, opacity: 1, transition: { duration: 0.5 } }
                     : {}
                 }
-                className="md:text-[50px] text-[30px] font-bold text-[#92C83E] ">
+                className="md:text-[50px] text-[30px] font-bold text-[#92C83E] headfont ">
                   Abhaya
                 </motion.div>
                 <motion.div
@@ -288,11 +288,11 @@ const facilitiesList = [
                     Welcome to Abhaya Ayurvedic Hospital – Your Gateway to
                     Holistic Healing
                   </b>{" "}
-                  Nestled in the serene hills of Wayanad, Abhaya Ayurvedic
+                  <span className="block">Nestled in the serene hills of Wayanad, Abhaya Ayurvedic
                   Hospital is a sanctuary where ancient wisdom meets modern
                   care. Rooted in the 5,000-year-old science of Ayurveda, we are
                   dedicated to promoting wellness and harmony through authentic
-                  treatments tailored to your unique needs.
+                  treatments tailored to your unique needs.</span>
                 </motion.div>
 
                 <motion.div
@@ -445,8 +445,8 @@ const facilitiesList = [
                       }
                     : {}
                 }
-                className="md:text-[50px] text-[30px] font-bold leading-tight mb-3 md:mb-0 text-[#fff]">
-                  PROFESSIONAL AYURVEDIC SPECIALIST
+                className="md:text-[50px] text-[30px] font-bold leading-tight mb-3 md:mb-0 text-[#fff] headfont">
+                  Professional Ayurvedic Specialist
                 </motion.div>
                 <motion.div
                 ref={ref9}
@@ -831,7 +831,7 @@ const facilitiesList = [
           <div className=" absolute top-0 bottom-0 right-0 left-0 w-full opacity-50 h-full -z-10">
             {/* <img src={slide} alt="" className="w-full h-full object-cover" /> */}
           </div>
-          <div className="hidden md:flex absolute right-0 bottom-72  z-20 md:top-2 md:h-full h-[300px]">
+          <div className="hidden md:flex absolute right-0 bottom-72  z-20 md:top-2 md:h-auto h-[300px]">
             <img src={dec1} alt="" />
           </div>
           <div className="max-w-[1400px] mx-auto w-full">

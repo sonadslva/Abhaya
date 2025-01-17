@@ -224,7 +224,7 @@ const Team = () => {
             ref={ref8}
             initial={{x:100, opacity:1}}
             animate={inView8 ? {x:0,opacity:1,transition:{duration:0.8}} : {}}
-            className="mb-5 md:text-[50px] 4xl:text-[60px] text-[30px] leading-tight font-bold text-[#fff]">
+            className="mb-5 md:text-[50px] 4xl:text-[60px] text-[30px] leading-tight font-bold text-[#fff] paraFont3">
               Ayurvedic Treatments: Revitalizing Life, Naturally
             </motion.div>  
             <motion.div
@@ -270,7 +270,7 @@ const Team = () => {
               ref={ref11}
               initial={{x:-100, opacity:1}}
               animate={inView11 ? {x:0,opacity:1,transition:{duration:0.8}} : {}}
-              className="md:text-4xl 4xl:text-[60px] text-[30px] font-bold text-[#92C83E] mb-4">
+              className="md:text-4xl 4xl:text-[60px] text-[30px] font-bold text-[#92C83E] mb-4 paraFont3">
                 The Science of Ayurveda
               </motion.h2>
               <motion.p
@@ -366,7 +366,7 @@ const Team = () => {
               ref={ref19}
               initial={{x:100, opacity:1}}
               animate={inView19 ? {x:0,opacity:1,transition:{duration:0.8}} : {}}
-              className="mb-5 md:text-[50px] text-[30px] leading-tight font-bold">
+              className="mb-5 md:text-[50px] text-[30px] leading-tight font-bold paraFont3">
                 Where Care Meets Innovation
               </motion.div>
               <div className="text-sm md:text-base paraFont">

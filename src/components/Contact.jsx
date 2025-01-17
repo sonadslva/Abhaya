@@ -132,15 +132,15 @@ const ContactUs = () => {
               <div className="w-full hidden md:flex h-full rounded-l-3xl overflow-hidden">
                 <img src={fac3} alt="" className="w-full h-full object-cover" />
               </div>
-              <div className=" md:absolute md:h-[70%] w-full md:w-[300px] rounded-t-3xl py-10 md:py-0 md:rounded-3xl bg-[#00863c] md:bg-[#000000b1] left-[-100px] top-24 backdrop-blur-sm flex flex-col justify-center items-center gap-5">
+              <div className=" md:absolute md:h-[70%] w-full md:w-[300px] rounded-t-3xl py-10 md:py-0 md:rounded-3xl bg-[#00863c] md:bg-[#000000b1] left-[-100px] top-24 backdrop-blur-sm flex flex-col justify-center items-center gap-5 paraFont">
                 <div className="flex flex-col justify-center items-center px-2 gap-1">
-                  <div className="text-[#fff] font-bold text-xl flex items-center gap-2">
+                  <div className="text-[#fff] font-bold text-xl flex items-center gap-2 ">
                     <span>
                       <ImLocation />
                     </span>{" "}
                     Location
                   </div>
-                  <div className="text-center text-[14px] text-[#e0dede]">
+                  <div className="text-center text-[14px] text-[#e0dede] ">
                   Mandad, Muttil, Wayanad, Kerala
                   </div>
                 </div>

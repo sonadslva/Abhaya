@@ -42,8 +42,16 @@
   font-family: 'Standerd';
   src: url('../src/fonts/Standerd-Regular.otf');
 }
+@font-face {
+  font-family: "Sabliman";
+  src: url("../src/fonts/Sublima-ExtraBold.otf");
+}
+@font-face {
+  font-family: "drugs";
+  src: url("../src/fonts/TT Drugs Trial Bold.otf");
+}
 *{
-  font-family:'myfont3' ;
+  font-family:'Standerd' ;
 }
 body {
   margin: 0;
@@ -73,7 +81,10 @@ body {
   /* font-size: larger; */
 }
 .paraFont3{
-  font-family: 'Mintely';
+  font-family: 'drugs';
+}
+.headfont{
+  font-family: "Standerd";
 }
 
 

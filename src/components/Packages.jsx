@@ -186,7 +186,7 @@ const Packages = () => {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="leading-tight text-center mb-2 font-bold">
+                  <div className="leading-tight text-center mb-2 font-bold px-2">
                     Renew Yourself <span className="block">With Ayurveda</span>
                   </div>
                   <div className="text-sm px-2 text-center font-extralight paraFont">
