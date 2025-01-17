@@ -1,5 +1,6 @@
 import React from "react";
 import service from '../assets/service.jpeg'
+import { FaWhatsapp } from "react-icons/fa6";
 const AyurvedaService = () => {
   const services = [
     {
@@ -31,6 +32,11 @@ const AyurvedaService = () => {
 
   return (
     <div className="bg-gray-100 py-12 px-5">
+        <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
+                <a href="tel:+919048121977">
+                  <FaWhatsapp />
+                </a>
+              </div>
         <div className="mb-10"></div>
     <div className="bg-gray-50 py-10 px-5">
       <h1 className="text-center text-3xl font-bold text-green-800 mb-8">

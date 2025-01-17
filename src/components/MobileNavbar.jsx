@@ -58,7 +58,7 @@ const MobileNavbar = ({menuOpen,setMenuOepn}) => {
         initial={{x:'100%',opacity:0}}
         animate={{x:0,opacity:1,transition:{duration:0.5, delay:1.8}}}
         className="flex justify-center items-center">
-          <button className="px-10 py-2 rounded-lg bg-[#fff] drop-shadow-sm font-semibold text-[#8acb13]">Login</button>
+          <a href="/login"><button className="px-10 py-2 rounded-lg bg-[#fff] drop-shadow-sm font-semibold text-[#8acb13]">Login</button></a>
         </motion.div>
         <div className="absolute bottom-5">
           <ul className="flex gap-2 justify-center items-center">

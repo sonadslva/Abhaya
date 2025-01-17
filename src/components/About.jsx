@@ -16,6 +16,7 @@ import { useInView } from "react-intersection-observer";
 import {motion} from "framer-motion"
 import LocomotiveScroll from "locomotive-scroll";
 import team2 from '../assets/team2.jpg'
+import { FaWhatsapp } from "react-icons/fa6";
 const Team = () => {
   const [activeDoctor, setActiveDoctor] = useState(null);
     const mainRef = useRef()
@@ -74,7 +75,12 @@ const Team = () => {
   const { ref: ref21, inView: inView21 } = useInView({ triggerOnce: true });
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
+        <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
+                <a href="tel:+919048121977">
+                  <FaWhatsapp />
+                </a>
+              </div>
       <section className="relative overflow-hidden flex mb-10 flex-col justify-center items-center h-screen">
         {/* Background images */}
         <div className="absolute w-full h-full top-0 left-0">
@@ -143,7 +149,7 @@ const Team = () => {
             ref={ref3}
             initial={{x:-100,opacity:0}}
             animate={inView3 ? {x:0,opacity:1,transition:{duration:0.5, delay:0.4}} : {}}
-            className="mb-5 text-[#000] text-sm md:text-base paraFont 4xl:text-xl">
+            className="mb-5 text-[#000] md:text-lg paraFont 4xl:text-xl">
               Our hospital excels in exceptional patient care, advanced
               technology, and a compassionate medical team. With expert doctors,
               modern facilities, and personalized treatments, we prioritize

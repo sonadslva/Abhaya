@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo.png";
 import whiteLogo from "../assets/Abhaya_Logo-white.png";
 import MobileNavbar from "./MobileNavbar";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdLocalPhone } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOepn] = useState(false);
+  const mainRef = useRef()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +28,24 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  
+    useEffect(() => {
+      // Ensure the container and its children are fully rendered
+      if (!mainRef.current) return;
+  
+      // Initialize Locomotive Scroll
+      const locoScroll = new LocomotiveScroll({
+        el: mainRef.current, // Reference to the scroll container
+        smooth: true,
+        lerp: 0.1,
+      });
+  
+      // Cleanup Locomotive Scroll instance on unmount
+      return () => {
+        if (locoScroll) locoScroll.destroy();
+      };
+    }, []);
 
   return (
     <div>

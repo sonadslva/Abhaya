@@ -9,6 +9,7 @@ import dec from "../assets/decorg.png"
 import contactbanner from '../assets/contactus.jpg'
 import ayurBg from "../assets/ayurBg.jpg"
 import greenShade from "../assets/black-shade.png"
+import { FaWhatsapp } from "react-icons/fa6";
 const ContactUs = () => {
   const [result, setResult] = useState("");
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -75,6 +76,11 @@ const ContactUs = () => {
 
   return (
     <div className="">
+        <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
+                <a href="tel:+919048121977">
+                  <FaWhatsapp />
+                </a>
+              </div>
       <section className="relative flex flex-col justify-center items-center h-screen z-10 mb-10">
         {/* Background images */}
         <div className="absolute w-full h-full top-0 left-0">

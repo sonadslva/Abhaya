@@ -24,7 +24,7 @@ import { useInView } from "react-intersection-observer";
 import {motion} from "framer-motion"
 import LocomotiveScroll from "locomotive-scroll";
 import img10 from '../assets/room3.jpg'
-
+import { FaWhatsapp } from "react-icons/fa6";
 const Facilities = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const mainRef = useRef()
@@ -102,6 +102,11 @@ const Facilities = () => {
 
   return (
     <div>
+        <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
+                <a href="tel:+919048121977">
+                  <FaWhatsapp />
+                </a>
+              </div>
       <section className="relative overflow-hidden flex flex-col justify-center items-center h-screen">
         {/* Background images */}
         <div className="absolute w-full h-full top-0 left-0">

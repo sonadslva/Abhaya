@@ -22,7 +22,7 @@ import skin from '../assets/skincare.jpeg'
 import hijama from '../assets/hijamapack.jpg'
 import postnatal2 from '../assets/postnatal2.jpg'
 import vericose from "../assets/vericose.jpg"
-
+import { FaWhatsapp } from "react-icons/fa6";
 const Packages = () => {
 
   useEffect(() => {
@@ -120,7 +120,12 @@ const Packages = () => {
     const { ref: ref21, inView: inView21 } = useInView({ triggerOnce: true });
 
   return (
-    <div>
+    <div className="overflow-hidden">
+        <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
+                <a href="tel:+919048121977">
+                  <FaWhatsapp />
+                </a>
+              </div>
       <section className="relative overflow-hidden flex flex-col justify-center items-center h-screen">
         {/* Background images */}
         <div className="absolute w-full h-full top-0 left-0">
@@ -163,8 +168,8 @@ const Packages = () => {
         </div>
       </section>
 
-      <section id="package" className=" relative w-full mb-20 flex justify-center flex-col items-center">
-        <div className="max-w-[1400px] mx-auto w-full px-2 md:px-0 h-[600px]">
+      <section id="package" className=" relative w-full mb-10 flex justify-center flex-col items-center">
+        <div className="max-w-[1400px] mx-auto w-full px-2 md:px-0 md:h-[600px]">
           <div className="grid grid-cols-1 place-items-center md:grid-cols-2 gap-10">
             {/* left */}
             <div className=" relative flex justify-center items-center gap-5">
@@ -249,35 +254,35 @@ const Packages = () => {
                   ref={ref8}
                   initial={{x:100, opacity:0,}}
                   animate={inView8 ? {x:0,opacity:1,transition:{duration:0.2, delay:0.5}} : {}}
-                  className="px-4 rounded-xl py-4 w-full h-[50px] border backdrop-blur-lg drop-shadow-sm text-sm md:text-base bg-[#B0E51E] text-[#000] paraFont">
+                  className="px-4 rounded-xl py-4 w-full border backdrop-blur-lg drop-shadow-sm text-sm md:text-base bg-[#B0E51E] text-[#000] paraFont">
                     <span className="font-semibold paraFont">Skin Care Package</span> - Herbal Ayurvedic care for naturally glowing, healthy, and radiant skin.
                   </motion.li>
                   <motion.li
                   ref={ref9}
                   initial={{x:100, opacity:0,}}
                   animate={inView9 ? {x:0,opacity:1,transition:{duration:0.2, delay:0.7}} : {}}
-                  className="px-4 rounded-xl py-4 w-full h-[50px] border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
+                  className="px-4 rounded-xl py-4 w-full  border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
                     <span className="font-semibold paraFont">Postnatal Care</span> - Holistic postnatal care with Ayurvedic therapies for recovery and wellness
                   </motion.li>
                   <motion.li
                   ref={ref10}
                   initial={{x:100, opacity:0,}}
                   animate={inView10 ? {x:0,opacity:1,transition:{duration:0.2, delay:0.9}} : {}}
-                  className="px-4 rounded-xl py-4 w-full h-[50px] border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
+                  className="px-4 rounded-xl py-4 w-full  border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
                     <span className="font-semibold paraFont">Hijama</span> - Experience natural healing with Hijama therapy for detox and wellness
                   </motion.li>
                   <motion.li
                   ref={ref11}
                   initial={{x:100, opacity:0,}}
                   animate={inView11 ? {x:0,opacity:1,transition:{duration:0.2, delay:1}} : {}}
-                  className="px-4 rounded-xl py-4 w-full h-[50px] border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
+                  className="px-4 rounded-xl py-4 w-full  border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
                     <span className="font-semibold paraFont">vericose</span> - Effective solutions for varicose veins with natural care and relief.
                   </motion.li>
                   <motion.li
                   ref={ref12}
                   initial={{x:100, opacity:0,}}
                   animate={inView12 ? {x:0,opacity:1,transition:{duration:0.2, delay:1.1}} : {}}
-                  className="px-4 rounded-xl py-4 w-full h-[50px] border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
+                  className="px-4 rounded-xl py-4 w-full  border backdrop-blur-lg bg-[#B0E51E] text-sm md:text-base drop-shadow-sm text-[#000] paraFont">
                   <span className="font-semibold paraFont">Resident Treatment Packages</span>(3 / 5 / 7 / 9 days) - Tailored Care for Your Recovery
                   </motion.li>
                   

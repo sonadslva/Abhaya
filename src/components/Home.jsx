@@ -183,7 +183,7 @@ const facilitiesList = [
 
   return (
     <>
-      <div>
+      <div className="overflow-hidden">
         <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
           <a href="tel:+919048121977">
             <FaWhatsapp />
@@ -213,7 +213,7 @@ const facilitiesList = [
               Holistic approach
               <span className="block banner-title">of Ayurveda</span>
             </div>
-            <div className="px-2 4xl:max-w-[1300px] 4xl:w-full w-[1150px] mx-auto text-[#fff] 4xl:text-2xl text-sm md:text-xl text-center mb-10 paraFont">
+            <div className="px-2 4xl:max-w-[1300px] xxl:w-[1100px] 4xl:w-full mx-auto text-[#fff] 4xl:text-2xl text-sm md:text-xl text-center mb-10 paraFont">
               We use modern concepts to combine ancient wisdom with holistic
               healing approaches in order to maintain and honor the ever-lasting
               legacy of Ayurveda. We seek to create a healthier, more balanced
@@ -387,14 +387,14 @@ const facilitiesList = [
 
         <section className="mb-10">
           <div className="max-w-[1200px] mx-auto px-2">
-            <div className="h-[600px] p-2 md:p-5 lg:p-10 border-[#57ff0f] rounded-tl-[50px] rounded-br-[50px] lg:rounded-tl-[80px] lg:rounded-br-[80px] border-[5px]">
+            <div className="h-[600px] p-2 md:p-5 overflow-hidden lg:p-10 border-[#57ff0f] rounded-tl-[50px] rounded-br-[50px] lg:rounded-tl-[80px] lg:rounded-br-[80px] border-[5px]">
               <video
                 src={aboutVideo}
                 autoPlay
                 muted
                 playsInline
                 loop
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-tl-[50px] rounded-br-[50px] lg:rounded-tl-[80px] lg:rounded-br-[80px]"
               ></video>
             </div>
           </div>
@@ -831,7 +831,7 @@ const facilitiesList = [
           <div className=" absolute top-0 bottom-0 right-0 left-0 w-full opacity-50 h-full -z-10">
             {/* <img src={slide} alt="" className="w-full h-full object-cover" /> */}
           </div>
-          <div className="absolute right-0 bottom-72  z-20 md:top-2 md:h-full h-[300px]">
+          <div className="hidden md:flex absolute right-0 bottom-72  z-20 md:top-2 md:h-full h-[300px]">
             <img src={dec1} alt="" />
           </div>
           <div className="max-w-[1400px] mx-auto w-full">

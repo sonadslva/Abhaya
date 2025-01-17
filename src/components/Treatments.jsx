@@ -54,7 +54,7 @@ import Hijama from '../assets/hijama.jpg'
 import { useInView } from "react-intersection-observer";
 import {motion} from "framer-motion"
 import LocomotiveScroll from "locomotive-scroll";
-
+import { FaWhatsapp } from "react-icons/fa6";
 const Team = () => {
   const [activeIndex, setActiveIndex] = useState(0); // Default middle card index
   const [visibleIndex, setVisibleIndex] = useState(0);
@@ -341,6 +341,11 @@ const Team = () => {
     
   return (
     <div className="flex flex-col overflow-hidden">
+        <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
+                <a href="tel:+919048121977">
+                  <FaWhatsapp />
+                </a>
+              </div>
       {/* banner */}
       <div className="w-full h-full bg-neutral-200">
         <section className="relative flex flex-col justify-center items-center h-screen z-10">
@@ -359,7 +364,7 @@ const Team = () => {
           {/* Content */}
           <div className="absolute z-30 flex flex-col justify-center items-center text-center w-full h-full">
             <div className="md:text-[90px] text-[35px] 5xl:text-[120px] font-black text-[#fff] leading-tight banner-title md:mb-5 mb-2">
-              <span className="block banner-title">
+              <span className="block banner-title px-2">
                 Healing Beyond Boundaries
               </span>
             </div>
@@ -572,7 +577,7 @@ const Team = () => {
         <div className="w-full max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 place-items-center md:grid-cols-2 md:gap-20 gap-32 max-w-[1400px] mx-auto">
             {services.map((item) => (
-              <div className="w-full md:h-[350px] h-[300px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] relative rounded-br-[50px] px-4 py-5">
+              <div className="w-full md:h-[350px] h-[380px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] relative rounded-br-[50px] px-4 py-5">
                 <div className=" absolute top-0 bottom-0 left-0 right-0 rounded-br-[50px] overflow-hidden opacity-20">
                   <img
                     src={bgorg}
