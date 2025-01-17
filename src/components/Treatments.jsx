@@ -342,7 +342,7 @@ const Team = () => {
   return (
     <div className="flex flex-col overflow-hidden">
         <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
-                <a href="tel:+919048121977">
+                <a href="https://wa.me/+919048121977">
                   <FaWhatsapp />
                 </a>
               </div>
@@ -575,7 +575,7 @@ const Team = () => {
 
       <section className="w-full mb-10 py-10 px-2 md:px-0">
         <div className="w-full max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 md:gap-20 gap-32 max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 md:gap-40 gap-32 max-w-[1400px] mx-auto">
             {services.map((item) => (
               <div className="w-full md:h-[350px] h-[380px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] relative rounded-br-[50px] px-4 py-5">
                 <div className=" absolute top-0 bottom-0 left-0 right-0 rounded-br-[50px] overflow-hidden opacity-20">
@@ -592,14 +592,14 @@ const Team = () => {
                   alt=""
                   className="w-auto absolute h-[80px] md:top-[-30px] top-[-40px] right-[-10px] object-contain"
                 />
-                <div className=" absolute md:top-[-50px] top-[-80px] left-0 w-[170px] h-[150px] bg-[#15f3ff] rounded-tr-[30px]">
+                <div className="absolute md:top-[-50px] lg:top-[-100px] top-[-80px] left-0 w-[320px] lg:h-[200px] h-[150px] bg-[#15f3ff] rounded-tl-[30px] rounded-br-[30px] overflow-hidden">
                   <img
                     src={item.image}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="text-[#000] text-3xl font-bold flex justify-center mb-2 md:mb-5 text-center pt-14 md:pt-10">
+                <div className="text-[#000] text-3xl font-bold flex justify-end mb-2 md:mb-5 text-center pt-14 md:pt-10">
                   {item.title}
                 </div>
                 <div className="flex md:mb-5 mb-2 text-sm md:text-base text-center md:text-start paraFont">

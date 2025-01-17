@@ -10,6 +10,8 @@ import contactbanner from '../assets/contactus.jpg'
 import ayurBg from "../assets/ayurBg.jpg"
 import greenShade from "../assets/black-shade.png"
 import { FaWhatsapp } from "react-icons/fa6";
+import contactBg from "../assets/contact.png"
+
 const ContactUs = () => {
   const [result, setResult] = useState("");
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -75,25 +77,29 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="">
-        <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
-                <a href="tel:+919048121977">
-                  <FaWhatsapp />
-                </a>
-              </div>
+    <div className="overflow-hidden">
+      <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
+        <a href="https://wa.me/+919048121977">
+          <FaWhatsapp />
+        </a>
+      </div>
       <section className="relative flex flex-col justify-center items-center h-screen z-10 mb-10">
         {/* Background images */}
         <div className="absolute w-full h-full top-0 left-0">
           <img src={blackshade} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute w-full h-full -z-10">
-          <img src={contactbanner} alt="ayur" className="w-full h-full object-cover" />
+          <img
+            src={contactBg}
+            alt="ayur"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Content */}
         <div className="absolute z-30 flex flex-col justify-center items-center text-center w-full h-full">
           <div className="md:text-[100px] text-[35px] font-black text-[#fff] leading-tight banner-title mb-5">
-           Connect With Us
+            Connect With Us
             <span className="block banner-title">Today!</span>
           </div>
           {/* <div className="px-2 max-w-[1150px] text-sm mx-auto text-[#fff] md:text-xl mb-10 paraFont">
@@ -104,22 +110,46 @@ const ContactUs = () => {
             consectetur adipisicing elit. Quis odio perferendis</span>
           </div> */}
           <div className="flex justify-center items-center gap-2 md:gap-10">
-            <div onClick={scrollToElement} className="px-10 py-2 cursor-pointer rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md">
+            <div
+              onClick={scrollToElement}
+              className="px-10 py-2 cursor-pointer rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md"
+            >
               Discover More
             </div>
           </div>
         </div>
-        <div className=" absolute bottom-0 left-0 right-0 w-full">
-          <img src={whiteWave} alt="" className="w-full object-cover"/>
+        <div className=" absolute bottom-0 left-0 z-20 right-0 w-full">
+          <img src={whiteWave} alt="" className="w-full object-cover" />
+        </div>
+        <div className="absolute z-10 w-full bottom-[20px] h-auto left-0 right-0 rotate-[184deg] opacity-30">
+          <img
+            src={whiteWave}
+            className="w-full h-auto rotate-180"
+            alt=""
+          />
         </div>
       </section>
 
-      <section id="facilities" className="w-full mb-10 flex flex-col justify-center items-center">
+      <section
+        id="facilities"
+        className="w-full mb-10 flex flex-col justify-center items-center"
+      >
         <div className="text-center">
-          <div className="text-center font-bold">" Connecting You with Solutions - Reach Out to Us Anytime! "</div>
-          <div className="md:text-[70px] text-[30px] relative paraFont3">Get In Touch
-            <span className="absolute hidden lg:flex top-[-5px] w-auto h-[60px] md:h-[100px]  right-[-55px]" ><img src={dec} alt="" className=" w-full h-full object-contain" /></span>
-            <span className="absolute hidden lg:flex top-[-5px] md:top-[-10px]  left-2 md:left-[-60px] w-auto h-[60px] md:h-[100px]" ><img src={dec} alt="" className=" w-full h-full transform scale-x-[-1] object-contain" /></span>
+          <div className="text-center font-bold">
+            " Connecting You with Solutions - Reach Out to Us Anytime! "
+          </div>
+          <div className="md:text-[70px] text-[30px] relative paraFont3">
+            Get In Touch
+            <span className="absolute hidden lg:flex top-0 w-auto h-[60px] md:h-[100px]  right-[-130px]">
+              <img src={dec} alt="" className=" w-full h-full object-contain" />
+            </span>
+            <span className="absolute hidden lg:flex top-[-5px] md:top-[-0px]  left-2 md:left-[-135px] w-auto h-[60px] md:h-[100px]">
+              <img
+                src={dec}
+                alt=""
+                className=" w-full h-full transform scale-x-[-1] object-contain"
+              />
+            </span>
           </div>
         </div>
       </section>
@@ -132,7 +162,7 @@ const ContactUs = () => {
               <div className="w-full hidden md:flex h-full rounded-l-3xl overflow-hidden">
                 <img src={fac3} alt="" className="w-full h-full object-cover" />
               </div>
-              <div className=" md:absolute md:h-[70%] w-full md:w-[300px] rounded-t-3xl py-10 md:py-0 md:rounded-3xl bg-[#00863c] md:bg-[#000000b1] left-[-100px] top-24 backdrop-blur-sm flex flex-col justify-center items-center gap-5 paraFont">
+              <div className=" md:absolute md:h-[70%] w-full md:w-[300px] rounded-t-3xl py-10 md:py-0 md:rounded-3xl bg-[#00863c] md:bg-[#000000] left-[-100px] top-24 backdrop-blur-sm flex flex-col justify-center items-center gap-5 paraFont">
                 <div className="flex flex-col justify-center items-center px-2 gap-1">
                   <div className="text-[#fff] font-bold text-xl flex items-center gap-2 ">
                     <span>
@@ -141,7 +171,7 @@ const ContactUs = () => {
                     Location
                   </div>
                   <div className="text-center text-[14px] text-[#e0dede] ">
-                  Mandad, Muttil, Wayanad, Kerala
+                    Mandad, Muttil, Wayanad, Kerala
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center px-2 gap-1">
@@ -174,7 +204,10 @@ const ContactUs = () => {
                 Contact Form
               </div>
               <div>
-                <form className="flex flex-col justify-center items-center w-full gap-5" onSubmit={onSubmit}>
+                <form
+                  className="flex flex-col justify-center items-center w-full gap-5"
+                  onSubmit={onSubmit}
+                >
                   <input
                     type="text"
                     placeholder="Full Name..."
@@ -191,17 +224,18 @@ const ContactUs = () => {
                     type="text"
                     placeholder="Subject..."
                     className="border-none outline-none px-4 py-4 w-full rounded-xl"
-                    
                   />
                   <textarea
-                   
                     id=""
                     placeholder="Message"
                     className="border-none outline-none px-4 py-4 w-full rounded-xl"
                     name="message"
                   ></textarea>
                   <div className="flex justify-center items-center">
-                    <button className="px-20 py-3 rounded-3xl bg-[#fff] font-semibold" type="submit">
+                    <button
+                      className="px-20 py-3 rounded-3xl bg-[#fff] font-semibold"
+                      type="submit"
+                    >
                       Submit
                     </button>
                   </div>
@@ -211,18 +245,18 @@ const ContactUs = () => {
           </div>
         </div>
         {isPopupVisible && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-lg text-center shadow-lg max-w-sm w-full">
-            <p className="text-lg font-semibold text-green-500">{result}</p>
-            <button
-              onClick={closePopup}
-              className="mt-4 py-2 px-6 bg-green-500 text-white rounded-lg hover:bg-green-600"
-            >
-              Close
-            </button>
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white p-6 rounded-lg text-center shadow-lg max-w-sm w-full">
+              <p className="text-lg font-semibold text-green-500">{result}</p>
+              <button
+                onClick={closePopup}
+                className="mt-4 py-2 px-6 bg-green-500 text-white rounded-lg hover:bg-green-600"
+              >
+                Close
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
       </section>
 
       <section className="mt-20">
@@ -236,40 +270,40 @@ const ContactUs = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
-        <section className="w-full flex justify-center items-center mx-auto relative py-10">
-                      <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
-                        <img src={ayurBg} alt="" className="w-full h-full object-cover" />
-                      </div>
-                      <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
-                        <img
-                          src={greenShade}
-                          alt=""
-                          className="w-full h-full object-cover opacity-90"
-                        />
-                      </div>
-                      <div className="max-w-[1400px] w-full relative z-20 flex flex-col justify-center items-center text-center">
-                        <div className="text-[#ebe420] mb-3">Ayurveda Treatments</div>
-                        <div className="text-[30px] leading-tight text-[#fff] font-bold mb-3">
-                          Get Authentic Ayurvedic
-                          <span className="block">Treatment Today!</span>
-                        </div>
-                        <div className="text-[#fff] max-w-[900px] mx-auto mb-5 text-sm md:text-base px-1 md:px-0 paraFont">
-                          Discover the essence of Ayurveda, where ancient wisdom meets
-                          modern care. From personalized therapies to natural remedies, we
-                          ensure a path to holistic healing and lasting wellness. Your
-                          journey to better health starts here.
-                        </div>
-            
-                        <div className="flex justify-center items-center gap-2 md:gap-10 px-1 md:px-0">
-                          <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
-                            <a href="tel:+919048121977">Consultation On Call</a>
-                          </div>
-                          <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
-                            <a href="https://wa.me/919048121977">Book Appoinment</a>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
+      <section className="w-full flex justify-center items-center mx-auto relative py-10">
+        <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
+          <img src={ayurBg} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className=" absolute top-0 bottom-0 left-0 right-0 w-full h-full">
+          <img
+            src={greenShade}
+            alt=""
+            className="w-full h-full object-cover opacity-90"
+          />
+        </div>
+        <div className="max-w-[1400px] w-full relative z-20 flex flex-col justify-center items-center text-center">
+          <div className="text-[#ebe420] mb-3">Ayurveda Treatments</div>
+          <div className="text-[30px] leading-tight text-[#fff] font-bold mb-3">
+            Get Authentic Ayurvedic
+            <span className="block">Treatment Today!</span>
+          </div>
+          <div className="text-[#fff] max-w-[900px] mx-auto mb-5 text-sm md:text-base px-1 md:px-0 paraFont">
+            Discover the essence of Ayurveda, where ancient wisdom meets modern
+            care. From personalized therapies to natural remedies, we ensure a
+            path to holistic healing and lasting wellness. Your journey to
+            better health starts here.
+          </div>
+
+          <div className="flex justify-center items-center gap-2 md:gap-10 px-1 md:px-0">
+            <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
+              <a href="tel:+919048121977">Consultation On Call</a>
+            </div>
+            <div className="md:px-10 px-8 py-3 text-sm md:text-base rounded-lg backdrop-blur-sm border text-[#fff] cursor-pointer">
+              <a href="https://wa.me/919048121977">Book Appoinment</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

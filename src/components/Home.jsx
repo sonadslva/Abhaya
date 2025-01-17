@@ -185,7 +185,7 @@ const facilitiesList = [
     <>
       <div className="overflow-hidden">
         <div className="fixed bottom-10 right-10 z-[999] text-[#fff] bg-[#58F978] p-2 rounded-full text-[50px]">
-          <a href="tel:+919048121977">
+          <a href="https://wa.me/+919048121977">
             <FaWhatsapp />
           </a>
         </div>
@@ -387,7 +387,7 @@ const facilitiesList = [
 
         <section className="mb-10">
           <div className="max-w-[1200px] mx-auto px-2">
-            <div className="h-[600px] p-2 md:p-5 overflow-hidden lg:p-10 border-[#57ff0f] rounded-tl-[50px] rounded-br-[50px] lg:rounded-tl-[80px] lg:rounded-br-[80px] border-[5px]">
+            <div className="h-[600px] overflow-hidden rounded-tl-[50px] rounded-br-[50px] lg:rounded-tl-[80px] lg:rounded-br-[80px]">
               <video
                 src={aboutVideo}
                 autoPlay
