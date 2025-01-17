@@ -3,6 +3,8 @@ import logo from "../assets/logo.png";
 import whiteLogo from "../assets/Abhaya_Logo-white.png";
 import MobileNavbar from "./MobileNavbar";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { MdLocalPhone } from "react-icons/md";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +44,7 @@ const Navbar = () => {
             </div>
 
             <nav
-              className={`hidden md:flex space-x-6 4xl:text-2xl ${
+              className={`hidden md:flex space-x-6 4xl:text-xl ${
                 isScrolled ? "text-[#000000]" : "text-[#ffffff]"
               }`}
             >
@@ -74,6 +76,11 @@ const Navbar = () => {
             </nav>
             <div className={`text-3xl md:hidden ${isScrolled ? "text-[#000]" : "text-[#fff]" }`} onClick={() => setMenuOepn(!menuOpen)}>
               <HiMenuAlt3/>
+            </div>
+
+            <div className="hidden md:flex md:flex-col">
+              <div className={`flex items-center gap-2 ${isScrolled ? "text-[#000]" : "text-[#fff]"}`}><MdLocalPhone/>+91 90481 21977</div>
+              <div className={`flex items-center gap-2 ${isScrolled ? "text-[#000]" : "text-[#fff]"}`}><MdOutlineMailOutline/>abhayaayur@gmail.com</div>
             </div>
           </div>
         </div>

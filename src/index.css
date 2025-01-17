@@ -66,9 +66,11 @@ body {
 
 .paraFont{
   font-family: 'Standerd';
+  /* font-size: larger; */
 }
 .paraFont2{
   font-family: 'Standerd';
+  /* font-size: larger; */
 }
 .paraFont3{
   font-family: 'Mintely';
@@ -252,3 +254,4 @@ p {
 .custom-shape-divider-top-1736324321 .shape-fill {
   fill: #b0dcbe;
 }
+

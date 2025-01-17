@@ -1,17 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import blackshade from "../assets/black-shade.png";
 import fac3 from "../assets/fac3.jpg";
 import { ImLocation } from "react-icons/im";
 import { MdLocalPhone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
-import whiteWave from "../assets/whitewave.png";
+import whiteWave from "../assets/beigewaveorg.png";
 import dec from "../assets/decorg.png"
-import contactbanner from '../assets/contactb.png'
+import contactbanner from '../assets/contactus.jpg'
 import ayurBg from "../assets/ayurBg.jpg"
 import greenShade from "../assets/black-shade.png"
 const ContactUs = () => {
   const [result, setResult] = useState("");
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const mainRef = useRef()
+
+  useEffect(() => {
+      // Ensure the container and its children are fully rendered
+      if (!mainRef.current) return;
+  
+      // Initialize Locomotive Scroll
+      const locoScroll = new LocomotiveScroll({
+        el: mainRef.current, // Reference to the scroll container
+        smooth: true,
+        lerp: 0.1,
+      });
+  
+      // Cleanup Locomotive Scroll instance on unmount
+      return () => {
+        if (locoScroll) locoScroll.destroy();
+      };
+    }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -46,6 +64,15 @@ const ContactUs = () => {
     setIsPopupVisible(false); // Close the popup when clicked
   };
 
+  const scrollToElement = () => {
+    const element = document.getElementById("facilities");
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offset = 100; // Padding offset
+      window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="">
       <section className="relative flex flex-col justify-center items-center h-screen z-10 mb-10">
@@ -60,18 +87,18 @@ const ContactUs = () => {
         {/* Content */}
         <div className="absolute z-30 flex flex-col justify-center items-center text-center w-full h-full">
           <div className="md:text-[100px] text-[35px] font-black text-[#fff] leading-tight banner-title mb-5">
-            Lorem ipsum dolor sit
-            <span className="block banner-title">amet consectetur</span>
+           Connect With Us
+            <span className="block banner-title">Today!</span>
           </div>
-          <div className="px-2 max-w-[1150px] text-sm mx-auto text-[#fff] md:text-xl mb-10 paraFont">
+          {/* <div className="px-2 max-w-[1150px] text-sm mx-auto text-[#fff] md:text-xl mb-10 paraFont">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
             ratione, hic culpa ullam minus labore veritatis similique aut
             expedita accusantium molestias <span className="hidden md:flex">repudiandae odio corrupti temporibus
             ducimus beatae eligendi dolorum ipsum. Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Quis odio perferendis</span>
-          </div>
+          </div> */}
           <div className="flex justify-center items-center gap-2 md:gap-10">
-            <div className="px-10 py-2 rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md">
+            <div onClick={scrollToElement} className="px-10 py-2 cursor-pointer rounded-3xl font-bold bg-[#ffffff] text-[#8acb13] drop-shadow-md">
               Discover More
             </div>
           </div>
@@ -81,12 +108,12 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <section className="w-full mb-10 flex flex-col justify-center items-center">
+      <section id="facilities" className="w-full mb-10 flex flex-col justify-center items-center">
         <div className="text-center">
-          <div className="text-center font-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur lorem</div>
+          <div className="text-center font-bold">" Connecting You with Solutions - Reach Out to Us Anytime! "</div>
           <div className="md:text-[70px] text-[30px] relative paraFont3">Get In Touch
-            <span className="absolute top-[-5px] w-auto h-[60px] md:h-[100px]" ><img src={dec} alt="" className=" w-full h-full object-contain" /></span>
-            <span className="absolute top-[-5px] md:top-[-10px] left-2 md:left-2 w-auto h-[60px] md:h-[100px]" ><img src={dec} alt="" className=" w-full h-full transform scale-x-[-1] object-contain" /></span>
+            <span className="absolute hidden lg:flex top-[-5px] w-auto h-[60px] md:h-[100px]  right-[-55px]" ><img src={dec} alt="" className=" w-full h-full object-contain" /></span>
+            <span className="absolute hidden lg:flex top-[-5px] md:top-[-10px]  left-2 md:left-[-60px] w-auto h-[60px] md:h-[100px]" ><img src={dec} alt="" className=" w-full h-full transform scale-x-[-1] object-contain" /></span>
           </div>
         </div>
       </section>
@@ -108,8 +135,7 @@ const ContactUs = () => {
                     Location
                   </div>
                   <div className="text-center text-[14px] text-[#e0dede]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum, quidem
+                  Mandad, Muttil, Wayanad, Kerala
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center px-2 gap-1">

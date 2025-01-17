@@ -17,9 +17,9 @@ const Footer = () => {
         style={{
           backgroundImage: `url(${img})`,
           // filter: 'blur(8px)',
-          backgroundSize: 'cover',
-          opacity:0.1,
-          backgroundPosition: 'center',
+          backgroundSize: "cover",
+          opacity: 0.1,
+          backgroundPosition: "center",
         }}
       ></div>
 
@@ -31,13 +31,22 @@ const Footer = () => {
             <div className="w-full flex flex-col justify-center items-center lg:w-[30%]">
               <div className="w-full flex">
                 <div className="w-full h-[100px] mb-5">
-                  <img src={logo} alt="Logo" className="w-full h-full object-contain" />
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
               <div className="mb-5 paraFont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores reprehenderit officia odit consectetur dolorem earum, dolore porro in asperiores unde.
+                Abhaya Ayurveda Hospital is a beacon of traditional healing
+                nestled in the heart of serene surroundings. Specializing in
+                Ayurvedic treatments, the hospital offers a comprehensive range
+                of services, catering to diverse health needs
               </div>
-              <div className="paraFont w-full flex mb-2 font-black">Customer Care Number</div>
+              <div className="paraFont w-full flex mb-2 font-black">
+                Customer Care Number
+              </div>
               <div className="paraFont flex items-center gap-2 font-bold w-full mb-3">
                 <span>
                   <MdLocalPhone />
@@ -45,20 +54,29 @@ const Footer = () => {
                 +91 90481 21977
               </div>
               <div className="paraFont flex w-full justify-start items-center gap-3">
-                <div className="text-xl font-bold">
-                  <IoLogoInstagram />
-                </div>
-                <div className="text-xl font-bold">
-                  <CiFacebook />
-                </div>
-                <div className="text-xl font-bold">
-                  <FiYoutube />
-                </div>
-              </div>
+  <a href="https://www.instagram.com/abhaya_ayur_veda/" target="_blank" rel="noopener noreferrer">
+    <div className="text-xl font-bold">
+      <IoLogoInstagram />
+    </div>
+  </a>
+  <a href="https://www.facebook.com/abhayaayurvedahospital/" target="_blank" rel="noopener noreferrer">
+    <div className="text-xl font-bold">
+      <CiFacebook />
+    </div>
+  </a>
+  <a href="https://www.youtube.com/channel/YourYouTubeLink" target="_blank" rel="noopener noreferrer">
+    <div className="text-xl font-bold">
+      <FiYoutube />
+    </div>
+  </a>
+</div>
+
             </div>
             {/* Second Div */}
             <div>
-              <div className="text-3xl mb-6 paraFont font-black">Treatments</div>
+              <div className="text-3xl mb-6 paraFont font-black">
+                Treatments
+              </div>
               <ul className="flex flex-col gap-2 text-sm paraFont">
                 <li>
                   <a href="/treatment">Back Pain</a>
@@ -121,7 +139,7 @@ const Footer = () => {
               <div className="text-3xl mb-6 paraFont font-black">Reach Us</div>
               <div className="text-lg mb-2 paraFont font-bold">Address</div>
               <a href="https://maps.app.goo.gl/ZcDuByGtzD1bt3AQ8">
-                <div className="flex gap-2 mb-3 paraFont">
+                <div className="flex gap-2 mb-3 paraFont font-black">
                   <span className="mt-1 text-xl">
                     <MdLocationPin />
                   </span>
@@ -130,7 +148,7 @@ const Footer = () => {
               </a>
               <div className="mb-2 text-lg paraFont font-bold">Email</div>
               <a href="mailto:abhayaayur@gmail.com">
-                <div className="flex gap-2 mb-3 paraFont">
+                <div className="flex gap-2 mb-3 paraFont font-black">
                   <span className="mt-1 text-xl">
                     <MdOutlineEmail />
                   </span>
@@ -139,7 +157,7 @@ const Footer = () => {
               </a>
               <div className="mb-2 text-lg paraFont font-bold">Phone</div>
               <a href="tel:+919048121977">
-                <div className="flex gap-2 paraFont">
+                <div className="flex gap-2 paraFont font-black">
                   <span className="mt-1 text-xl">
                     <MdLocalPhone />
                   </span>
