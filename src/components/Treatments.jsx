@@ -4,16 +4,14 @@ import neckpain from "../assets/neckpain.jpg";
 import hairfall from "../assets/hairfall.jpg";
 import legpain from "../assets/legpain.jpeg";
 import migraine from "../assets/migrain.jpg";
-import women from "../assets/women.jpeg";
-import frozensholder from "../assets/frozensholder.jpg";
-import childcare from "../assets/childcare.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Dhara from "../assets/Dharaa.jpg";
 import navarakizi from "../assets/navarakizhi.jpg";
-import elakizhi from "../assets/ELAKIZHI.jpg";
+
 import pizhichil from "../assets/pizichill.jpg";
 import Shirodhara from "../assets/Shirodhara.jpg";
 import kashayadhara from "../assets/kashayadhara.jpg";
@@ -30,7 +28,7 @@ import small from "../assets/small.png";
 import bgorg from "../assets/treatbgorg.jpg";
 import bottomSide from "../assets/bggrn.png";
 import blackshade from "../assets/black-shade.png";
-import tbg from "../assets/tbg.jpg";
+
 import ayurBg from "../assets/ayurBg.jpg"
 import greenShade from "../assets/black-shade.png"
 import vericose from "../assets/vericose.jpg"

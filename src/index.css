@@ -265,4 +265,17 @@ p {
 .custom-shape-divider-top-1736324321 .shape-fill {
   fill: #b0dcbe;
 }
+.NavbarHover {
+  transition: all .1s ease;
+}
+li{
+  list-style: none;
+}
+.NavbarHover:hover {
+  color: #ff9d00;
+}
 
+.active-link {
+  color: #ff9d00;
+  font-weight: 800;
+}

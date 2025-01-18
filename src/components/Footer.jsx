@@ -79,29 +79,40 @@ const Footer = () => {
               </div>
               <ul className="flex flex-col gap-2 text-sm paraFont">
                 <li>
+                  <a href="/treatment">Vericos Vain</a>
+                </li>
+                <li>
+                  <a href="/treatment">Life Style Diseases</a>
+                </li>
+                <li>
                   <a href="/treatment">Back Pain</a>
                 </li>
                 <li>
-                  <a href="/treatment">For Neck Pain</a>
+                  <a href="/treatment">Knee Pain</a>
                 </li>
                 <li>
-                  <a href="/treatment">Child Illness</a>
+                  <a href="/treatment">Rheumatology</a>
                 </li>
                 <li>
-                  <a href="/treatment">Leg Pain</a>
+                  <a href="/treatment">Gynecology</a>
                 </li>
                 <li>
-                  <a href="/treatment">Frozen Shoulder</a>
+                  <a href="/treatment">Postnatal Care</a>
                 </li>
                 <li>
-                  <a href="/treatment">Hairfall and Dandruff</a>
+                  <a href="/treatment">Skin Diseases</a>
                 </li>
                 <li>
                   <a href="/treatment">Migraine</a>
                 </li>
                 <li>
-                  <a href="/treatment">Women Illness</a>
+                  <a href="/treatment">Herbal</a>
                 </li>
+                <li>
+                  <a href="/treatment">PCOD Diseases</a>
+                </li>
+                
+
               </ul>
             </div>
             {/* Third Div */}
@@ -109,29 +120,43 @@ const Footer = () => {
               <div className="text-3xl mb-6 paraFont font-black">Services</div>
               <ul className="flex flex-col gap-2 text-sm paraFont">
                 <li>
-                  <a href="/treatment">Dhara</a>
+                  <a href="/treatment">Abhyanga</a>
                 </li>
                 <li>
-                  <a href="/treatment">Navarakizhi</a>
+                  <a href="/treatment">Steam</a>
                 </li>
                 <li>
-                  <a href="/treatment">Elakizhi</a>
+                  <a href="/treatment">Kizhi</a>
                 </li>
-                <li>
-                  <a href="/treatment">Pizhichil</a>
-                </li>
-                <li>
-                  <a href="/treatment">Shirodhara</a>
-                </li>
-                <li>
-                  <a href="/treatment">Kashaya Dhara</a>
-                </li>
-                <li>
-                  <a href="/treatment">Ayurvedic Massage</a>
-                </li>
+               
                 <li>
                   <a href="/treatment">Nasyam</a>
                 </li>
+                <li>
+                  <a href="/treatment">Virajanam</a>
+                </li>
+                <li>
+                  <a href="/treatment">Dhara</a>
+                </li>
+                
+                <li>
+                  <a href="/treatment">Vasti</a>
+                </li>
+               
+                <li>
+                  <a href="/treatment">Udhwarthanam</a>
+                </li>
+                <li>
+                  <a href="/treatment">Hijama</a>
+                </li>
+                <li>
+                  <a href="/treatment">Cauterization</a>
+                </li>
+                <li>
+                  <a href="/treatment">Vericore</a>
+                </li>
+              
+
               </ul>
             </div>
             {/* Fourth Div */}
@@ -162,6 +187,15 @@ const Footer = () => {
                     <MdLocalPhone />
                   </span>
                   +91 9048121977
+                </div>
+              </a>
+              <div className="mb-2 text-lg paraFont font-bold">Landline</div>
+              <a href="tel:+914936231232">
+                <div className="flex gap-2 paraFont font-black">
+                  <span className="mt-1 text-xl">
+                    <MdLocalPhone />
+                  </span>
+                  +91 4936231232
                 </div>
               </a>
             </div>

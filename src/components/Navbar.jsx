@@ -46,7 +46,12 @@ const Navbar = () => {
         if (locoScroll) locoScroll.destroy();
       };
     }, []);
-
+    const getLinkClassName = (path) => {
+      // Check if the current location path matches the route, allowing nested route support.
+      return location.pathname === path || location.pathname.startsWith(path)
+        ? 'NavbarHover active-link'
+        : 'NavbarHover';
+    };
   return (
     <div>
       <header
@@ -69,28 +74,28 @@ const Navbar = () => {
                 isScrolled ? "text-[#000000]" : "text-[#ffffff]"
               }`}
             >
-              <a href="/" className=" hover:text-blue-500">
-                Home
+              <a href="/" className={` hover:text-blue-500 ${getLinkClassName("/")}` } >
+                 Home
               </a>
-              <a href="/aboutus" className=" hover:text-blue-500">
+              <a href="/aboutus"  className={` hover:text-blue-500 ${getLinkClassName("/aboutus")}` } >
                 About Us
               </a>
               {/* <a href="/team" className=" hover:text-blue-500">
                           Team
                         </a> */}
-              <a href="/treatment" className=" hover:text-blue-500">
+              <a href="/treatment" className={` hover:text-blue-500 ${getLinkClassName("/treatment")}` } >
                 Treatments
               </a>
-              <a href="/packages" className=" hover:text-blue-500">
+              <a href="/packages" className={` hover:text-blue-500 ${getLinkClassName("/packages")}` } >
                 Packages
               </a>
-              <a href="/facilities" className=" hover:text-blue-500">
+              <a href="/facilities" className={` hover:text-blue-500 ${getLinkClassName("/facilities")}` } >
                 Facilities
               </a>
-              <a href="/contact" className=" hover:text-blue-500">
+              <a href="/contact" className={` hover:text-blue-500 ${getLinkClassName("/contact")}` } >
                 Contact Us
               </a>
-              <a href="/login" className=" hover:text-blue-500">
+              <a href="/login" className={` hover:text-blue-500 ${getLinkClassName("/login")}` } >
                LogIn
               </a>
               

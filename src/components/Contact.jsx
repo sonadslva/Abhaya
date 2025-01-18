@@ -6,12 +6,12 @@ import { MdLocalPhone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import whiteWave from "../assets/beigewaveorg.png";
 import dec from "../assets/decorg.png"
-import contactbanner from '../assets/contactus.jpg'
+
 import ayurBg from "../assets/ayurBg.jpg"
 import greenShade from "../assets/black-shade.png"
 import { FaWhatsapp } from "react-icons/fa6";
 import contactBg from "../assets/contact.png"
-
+import { TbDeviceLandlinePhone } from "react-icons/tb";
 const ContactUs = () => {
   const [result, setResult] = useState("");
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -182,7 +182,18 @@ const ContactUs = () => {
                     Phone
                   </div>
                   <div className="text-center text-[14px] text-[#e0dede]">
-                    +91 9899879676
+                    +91 9048121977
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center px-2 gap-1">
+                  <div className="text-[#fff] font-bold text-xl flex items-center gap-2">
+                    <span>
+                      <TbDeviceLandlinePhone />
+                    </span>{" "}
+                    Landline
+                  </div>
+                  <div className="text-center text-[14px] text-[#e0dede]">
+                    +91 4936231232
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center px-2 gap-1">

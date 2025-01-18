@@ -7,7 +7,7 @@ import aboutimg2 from '../assets/treat2.png'
 import greenWave from "../assets/greenwave.png"
 import blackshade from "../assets/black-shade.png"
 import whiteWave from "../assets/beigewaveorg.png";
-import t1 from "../assets/t1.jpg"
+
 import c1 from "../assets/gallery1.png"
 import c2 from "../assets/gallery2.png"
 import ayurBg from "../assets/ayurBg.jpg"

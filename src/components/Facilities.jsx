@@ -1,20 +1,21 @@
 import React ,{useState, useRef, useEffect} from "react";
-import img1 from "../assets/room1.jpg";
+import img1 from "../assets/abhaya1.jpg";
 import img2 from "../assets/abhayaroom4.jpg";
-import img3 from "../assets/room2.jpg";
+import img3 from "../assets/treatmentp1.png";
 import img4 from "../assets/abhayaroom5.jpeg";
 import img5 from "../assets/abhayaroom6.jpeg";
-import img6 from "../assets/abhayaroom7.jpeg";
+import img6 from "../assets/treatmentp2.png";
+import img18 from "../assets/treatmentp3.png";
 import img7 from '../assets/abhayatreatment.jpeg';
 import img8 from '../assets/treatmentroom2.jpg'
 import img9 from '../assets/room3.jpg'
 import blackshade from "../assets/black-shade.png"
 import small from "../assets/small.png"
 import beigewaveorg from "../assets/beigewaveorg.png"
-import fac1 from "../assets/room4.jpg"
-import fac2 from "../assets/treatmentroom1.jpg"
+import fac1 from "../assets/team1.png"
+import fac2 from "../assets/fac4.png"
 import fac3 from "../assets/farmacy.png"
-import fac4 from "../assets/room1.jpg"
+import fac4 from "../assets/fac1.png"
 import facwave from "../assets/facwave.png"
 import bgimg from "../assets/bgimg.png"
 import slide2 from "../assets/b1.jpg"
@@ -25,8 +26,15 @@ import {motion} from "framer-motion"
 import LocomotiveScroll from "locomotive-scroll";
 import img10 from '../assets/gallery1.png'
 import img11 from '../assets/gallery2.png'
-import img12 from '../assets/team1.png'
+import img12 from '../assets/abhaya4.jpg'
 import img13 from '../assets/team2.jpg'
+import img14 from '../assets/abhaya2.jpg'
+import img15 from '../assets/abhaya3.png'
+import img16 from '../assets/gallery3.png'
+import img17 from '../assets/gallery4.png'
+import img19 from '../assets/mainroom1.png'
+import img20 from '../assets/room4.jpg'
+import img21 from '../assets/treatmentroom.jpg'
 import { FaWhatsapp } from "react-icons/fa6";
 const Facilities = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -63,7 +71,14 @@ const Facilities = () => {
     { id: 11, src: img11, alt: "img11" },
     { id: 12, src: img12, alt: "img12" },
     { id: 13, src: img13, alt: "img13" },
-
+    { id: 14, src: img14, alt: "img14" },
+    { id: 15, src: img15, alt: "img15" },
+    { id: 16, src: img16, alt: "img16" },
+    { id: 17, src: img17, alt: "img17" },
+    { id: 18, src: img18, alt: "img18" },
+    { id: 19, src: img19, alt: "img19" },
+    { id: 20, src: img20, alt: "img20" },
+    { id: 21, src: img21, alt: "img21" },
   ];
 
   const openModal = (image) => {

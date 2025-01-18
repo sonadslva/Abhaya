@@ -22,7 +22,7 @@ import whiteWave from "../assets/beigewaveorg.png"
 import beigeWave from "../assets/greenwave.png"
 import ayurBg from "../assets/ayurBg.jpg"
 import greenShade from "../assets/black-shade.png"
-import t1 from "../assets/t1.jpg"
+
 import cimg from "../assets/cimg.png"
 import customerreview from "../assets/cutomerreview.jpg"
 import { collection, getDocs } from 'firebase/firestore';
@@ -32,13 +32,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay, Navigation } from "swiper/modules";
 import Abhyanga from "../assets/Abhyanga.jpg"
-import vericose from "../assets/vericose.jpg"
-import lifestyle from "../assets/lifestyledisease.jpg"
-import rhuemetrology from "../assets/rhuemetrology.jpg"
-import Gynecology from "../assets/Gynecology.jpg"
-import postnatal from "../assets/postnatal.jpg"
-import skincare from "../assets/skincare.jpg"
-import pcod from "../assets/pcod.jpg"
+
 
 import steam from '../assets/abhayatreatment.jpeg';
 import podikizhi from '../assets/podikizhi.jpg';
@@ -49,7 +43,7 @@ import { image } from "framer-motion/client";
 import januvasti from '../assets/januvasti.jpg';
 import Udwarthanam from '../assets/Udwarthanam.jpg';
 import cauterization from '../assets/cauterization.jpg';
-import elakizhi from "../assets/ELAKIZHI.jpg";
+
 import Shirodhara from "../assets/Shirodhara.jpg";
 import kashayadhara from "../assets/kashayadhara.jpg";
 import ayurvedicmassage from "../assets/ayurvedicmassage.jpg";
@@ -60,8 +54,8 @@ import {motion} from "framer-motion"
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { FaWhatsapp } from "react-icons/fa6";
-import ac from "../assets/ac.png"
-import easyaccess from "../assets/easyaccess.png"
+
+
 import teamorg from "../assets/team.jpg"
 import aboutVideo from "../assets/aboutvideo.mp4"
 
@@ -141,16 +135,7 @@ const treatmentLists = [
   {name : "Vericore", image : ayurvedicmassage, desc : "Ayurvedic Therapy"},
 ]
 
-const facilitiesList = [
-  {content : "AC / Non AC Rooms", icon : ac},
-  {content : "Easy Access", icon : easyaccess},
-  {content : "Easy Access", icon : easyaccess},
-  {content : "Easy Access", icon : easyaccess},
-  {content : "Easy Access", icon : easyaccess},
-  {content : "Easy Access", icon : easyaccess},
-  {content : "Easy Access", icon : easyaccess},
-  {content : "Easy Access", icon : easyaccess},
-]
+
 
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
