@@ -4,7 +4,7 @@ import leaf3 from "../assets/leaf3.png"
 import b2 from "../assets/b2.jpg"
 import whiteWave from "../assets/beigewaveorg.png";
 import p1 from "../assets/p1.jpg"
-import p2 from "../assets/p2.jpg"
+import p2 from "../assets/p2.jpeg"
 import treat1 from "../assets/pack1.jpg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
