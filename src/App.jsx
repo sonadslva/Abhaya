@@ -4,7 +4,7 @@ import './App.css';
 import Login from './components/Login';
 import Home from './components/Home';
 import AboutUs from './components/About';
-
+import UploadVideo from './components/UploadVideo';
 import Treatment from './components/Treatments';
 import Contact from './components/Contact';
 import Facilities from './components/Facilities';
@@ -28,7 +28,7 @@ const AppWithRouting = () => {
   return (
     <>
       {/* Only render Navbar and Footer if the current route is not '/admin' or '/testimonial' */}
-      {location.pathname !== '/admin' && location.pathname !== '/testimonial' && location.pathname!=='/login' && <Navbar />}
+      {location.pathname !== '/admin' && location.pathname !== '/testimonial' && location.pathname!=='/login' && location.pathname!=='/UploadVideo' && <Navbar />}
       
       <Routes>
         <Route path='/login' element={<Login />} />
@@ -41,9 +41,10 @@ const AppWithRouting = () => {
         <Route path='/facilities' element={<Facilities />} />
         <Route path='/testimonial' element={<Testimonial />} />
         <Route path='/admin' element={<Admin />} />
+        <Route path='/UploadVideo' element={<UploadVideo/>}/>
       </Routes>
       
-      {location.pathname !== '/admin' && location.pathname !== '/testimonial' && location.pathname!=='/login' && <Footer />}
+      {location.pathname !== '/admin' && location.pathname !== '/testimonial' && location.pathname!=='/login' && location.pathname!=='/UploadVideo' && <Footer />}
     </>
   );
 }

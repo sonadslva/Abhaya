@@ -54,6 +54,7 @@ import {motion} from "framer-motion"
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { FaWhatsapp } from "react-icons/fa6";
+import { ref as dbRef, onValue, remove } from "firebase/database";
 
 
 import teamorg from "../assets/team.jpg"
@@ -165,6 +166,17 @@ const treatmentLists = [
       window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
     }
   };
+  // useEffect(() => {
+  //   const videosRef = dbRef(db, 'videos');
+  //   onValue(videosRef, (snapshot) => {
+  //     const data = snapshot.val();
+  //     if (data) {
+  //       const videosArray = Object.entries(data).map(([id, details]) => ({ id, ...details }));
+  //       setVideos(videosArray);
+  //       setLoading(false)
+  //     }
+  //   });
+  // }, []);
 
   return (
     <>

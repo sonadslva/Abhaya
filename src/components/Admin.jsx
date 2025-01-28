@@ -125,6 +125,14 @@ const Admin = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Link
+                  to="/UploadVideo"
+                  className="text-black text-lg flex items-center"
+                >
+                  <IoMdArrowRoundForward className="mr-2" /> Video
+                </Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Link
                   to="#"
                   onClick={handleLogout}
                   className="text-black text-lg flex items-center"
@@ -147,10 +155,11 @@ const Admin = () => {
                 </h1>
               </div>
             </div>
-
-            <h2 className="text-2xl font-semibold mb-4 text-center">
-              Testimonials
-            </h2>
+          
+                <h2 className="text-2xl font-semibold mb-4 text-center">
+                  Testimonials
+                </h2>
+              
 
             {testimonials.length > 0 ? (
               <table className="min-w-full table-auto border-collapse">
